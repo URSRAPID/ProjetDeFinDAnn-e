@@ -20,6 +20,6 @@ public class PositionView : MonoBehaviour, IObserver<VectorObservable>
 
     public void OnNext(VectorObservable value)
     {
-        _character.transform.position = value;
+        _character.transform.position = value.GetValue();
     }
 }
