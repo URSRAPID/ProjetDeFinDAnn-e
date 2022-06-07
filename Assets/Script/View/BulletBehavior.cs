@@ -4,7 +4,14 @@ using UnityEngine;
 
 public class BulletBehavior : MonoBehaviour
 {
-    // Start is called before the first frame update
+    public GameObject bullet;
+    public float _speedBullet;
+    private void Update()
+    {
+         
+        bullet.transform.position = bullet.transform.position + new Vector3(_speedBullet * Time.deltaTime , 0f, 0f);
+    }
+
     void OnEnable()
     {
         Invoke("OnDisable", 2.0f); 
@@ -15,4 +22,4 @@ public class BulletBehavior : MonoBehaviour
         this.gameObject.SetActive(false);
     }
 
-}
+ }
