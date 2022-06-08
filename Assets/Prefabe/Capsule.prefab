@@ -98,7 +98,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   bullet: {fileID: 3862605388609250188}
-  _speedBullet: 5
+  _speedBullet: 0
 --- !u!50 &8725271077381302053
 Rigidbody2D:
   serializedVersion: 4
