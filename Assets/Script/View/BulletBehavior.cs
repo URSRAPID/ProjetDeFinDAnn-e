@@ -14,7 +14,7 @@ public class BulletBehavior : MonoBehaviour
 
     void OnEnable()
     {
-        Invoke("OnDisable", 2.0f); 
+        Invoke("OnDisable", 5.0f); 
     }
 
     private void OnDisable()
@@ -22,4 +22,12 @@ public class BulletBehavior : MonoBehaviour
         this.gameObject.SetActive(false);
     }
 
- }
+    private void OnCollisionEnter2D(Collision2D collision)
+    {
+        if (collision.gameObject.tag == "Enemy")
+        {
+            OnDisable();
+        }
+        
+    }
+}
