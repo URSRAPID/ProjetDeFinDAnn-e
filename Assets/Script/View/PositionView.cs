@@ -3,10 +3,9 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class PositionView : MonoBehaviour, IObserver<VectorObservable>
+public class PositionView : MonoBehaviour, IObserver<Vector2>
 {
 
-    [SerializeField] GameObject _character;
     public void OnCompleted()
     {
         throw new NotImplementedException();
@@ -18,8 +17,8 @@ public class PositionView : MonoBehaviour, IObserver<VectorObservable>
     }
 
 
-    public void OnNext(VectorObservable value)
+    public void OnNext(Vector2 value)
     {
-        _character.transform.position = value.GetValue();
+        transform.position = value;
     }
 }
