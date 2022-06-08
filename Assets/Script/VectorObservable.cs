@@ -9,9 +9,9 @@ public class VectorObservable : IObservable<Vector2>
     private Vector2 _position;
    
 
-    public VectorObservable(Vector2 initPosition)
+    public VectorObservable(float x, float y)
     {
-        _position = initPosition;
+        _position = new Vector2(x,y);
         _observers = new List<IObserver <Vector2>>();
     }
 
@@ -19,8 +19,6 @@ public class VectorObservable : IObservable<Vector2>
     {
         return _position;
     }
-
-   
 
     public void SetValue(Vector2 newPosition)
     {

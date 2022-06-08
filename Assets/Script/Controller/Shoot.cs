@@ -3,10 +3,10 @@ using UnityEngine;
 
 public class Shoot : MonoBehaviour
 {
-    [SerializeField] private GameObject[] _bulletHolePrefabs;
+
     [SerializeField] private float cooldownSpawnPool;
 
-    private PoolManager _pool;
+     private PoolManager _pool;
     public Transform firePoint;
 
     private float currentCoolDown;
@@ -50,8 +50,6 @@ public class Shoot : MonoBehaviour
     void Shooter()
     {
         
-        // Assing Random Bullet 
-        // GameObject bulletHoleToUse = _bulletHolePrefabs[Random.Range(0, _bulletHolePrefabs.Length)];
 
         // Instantiate bullet holes
         // Iterate through the bullet hole pool list 
