@@ -6,18 +6,11 @@ public class Shoot : MonoBehaviour
 
     [SerializeField] private float cooldownSpawnPool;
 
-     private PoolManager _pool;
+    [SerializeField] private PoolManager _pool;
     public Transform firePoint;
 
     private float currentCoolDown;
 
-    //public float bulletSpeed = 10f;
-
-    
-
-  
-
-    Rigidbody2D rb;
 
     // Start is called before the first frame update
     void Start()

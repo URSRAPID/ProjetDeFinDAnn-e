@@ -13,7 +13,6 @@ GameObject:
   - component: {fileID: 2587968530293801475}
   - component: {fileID: -2404384803452167128}
   - component: {fileID: -5387975714049290846}
-  - component: {fileID: -3048873194984922058}
   - component: {fileID: -8462996395797936332}
   m_Layer: 0
   m_Name: Enemy
@@ -76,7 +75,7 @@ SpriteRenderer:
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: 0
   m_SortingLayer: 0
-  m_SortingOrder: 9
+  m_SortingOrder: 5
   m_Sprite: {fileID: 7482667652216324306, guid: 48e93eef0688c4a259cb0eddcd8661f7, type: 3}
   m_Color: {r: 1, g: 0, b: 0, a: 1}
   m_FlipX: 0
@@ -147,19 +146,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 6f22b7613e6a3594caaef5848e38b165, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  enemy: {fileID: -3048873194984922058}
---- !u!114 &-3048873194984922058
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 2587968530293801486}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: b591958d113d6244588ac9197f94f01e, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
+  cooldownSpawnPool: -0.7
+  firePoint: {fileID: 8563638448631562677}
 --- !u!50 &-8462996395797936332
 Rigidbody2D:
   serializedVersion: 4
@@ -205,7 +193,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 4932967700178686960}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0.955, y: 0, z: 0}
+  m_LocalPosition: {x: -1.038, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 2587968530293801472}

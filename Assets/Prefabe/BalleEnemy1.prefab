@@ -10,12 +10,11 @@ GameObject:
   m_Component:
   - component: {fileID: 9222328522006756427}
   - component: {fileID: 1356422854525889629}
-  - component: {fileID: 41779444444788159}
   - component: {fileID: -6969365491157231257}
-  - component: {fileID: -3576603624824651278}
+  - component: {fileID: -716168934656945231}
   m_Layer: 0
   m_Name: BalleEnemy1
-  m_TagString: Untagged
+  m_TagString: BalleEnemy
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -73,7 +72,7 @@ SpriteRenderer:
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: 0
   m_SortingLayer: 0
-  m_SortingOrder: 0
+  m_SortingOrder: 9
   m_Sprite: {fileID: -2413806693520163455, guid: ebe73ca9363db456bacf42c025bb4847, type: 3}
   m_Color: {r: 1, g: 0, b: 0, a: 1}
   m_FlipX: 0
@@ -85,27 +84,6 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
---- !u!50 &41779444444788159
-Rigidbody2D:
-  serializedVersion: 4
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 7342689394327939201}
-  m_BodyType: 0
-  m_Simulated: 1
-  m_UseFullKinematicContacts: 0
-  m_UseAutoMass: 0
-  m_Mass: 1
-  m_LinearDrag: 0
-  m_AngularDrag: 0.05
-  m_GravityScale: 0
-  m_Material: {fileID: 0}
-  m_Interpolate: 0
-  m_SleepingMode: 1
-  m_CollisionDetection: 0
-  m_Constraints: 0
 --- !u!58 &-6969365491157231257
 CircleCollider2D:
   m_ObjectHideFlags: 0
@@ -122,7 +100,7 @@ CircleCollider2D:
   m_Offset: {x: 0, y: 0}
   serializedVersion: 2
   m_Radius: 0.49999997
---- !u!114 &-3576603624824651278
+--- !u!114 &-716168934656945231
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -131,8 +109,8 @@ MonoBehaviour:
   m_GameObject: {fileID: 7342689394327939201}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 6a6439f0056b5dc459708cd703e83350, type: 3}
+  m_Script: {fileID: 11500000, guid: 12f3440771f14724791544113f7d9335, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   bullet: {fileID: 7342689394327939201}
-  _speedBullet: 0
+  _speedBullet: 8

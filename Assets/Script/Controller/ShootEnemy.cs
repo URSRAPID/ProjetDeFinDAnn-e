@@ -1,9 +1,7 @@
 using UnityEngine;
 
-public class EnemyController : MonoBehaviour
+public class ShootEnemy : MonoBehaviour
 {
-
-
     [SerializeField] private float cooldownSpawnPool;
 
     private PoolManagerEnemy _pool;
@@ -32,12 +30,13 @@ public class EnemyController : MonoBehaviour
         currentCoolDown -= Time.deltaTime;
         if (currentCoolDown <= 0)
         {
-
-            Debug.Log("Am Tras2");
-            Shooter();
-            currentCoolDown = cooldownSpawnPool;
-            currentCoolDown++;
-
+            if (Input.GetMouseButton(0))
+            {
+                Debug.Log("Am Tras2");
+                Shooter();
+                currentCoolDown = cooldownSpawnPool;
+                currentCoolDown++;
+            }
         }
     }
 
@@ -78,13 +77,4 @@ public class EnemyController : MonoBehaviour
         }
 
     }
-    private void OnCollisionEnter2D(Collision2D collision)
-    {
-        if (collision.gameObject.tag == "BalleCharacter")
-        {
-            Destroy(gameObject);
-        }
-    }
-
-
 }
