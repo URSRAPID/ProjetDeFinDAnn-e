@@ -1,24 +1,15 @@
-
+using System.Collections;
+using System.Collections.Generic;
 using UnityEngine;
 
-public class Shoot : MonoBehaviour
+public class ShootEnemy : MonoBehaviour
 {
-
     [SerializeField] private float cooldownSpawnPool;
 
-     private PoolManager _pool;
+    private PoolManager _pool;
     public Transform firePoint;
 
     private float currentCoolDown;
-
-    //public float bulletSpeed = 10f;
-
-    
-
-  
-
-   // Rigidbody2D rb;
-
     // Start is called before the first frame update
     void Start()
     {
@@ -45,13 +36,10 @@ public class Shoot : MonoBehaviour
                 currentCoolDown++;
             }
         }
-        
     }
-
-
     void Shooter()
     {
-        
+
 
         // Instantiate bullet holes
         // Iterate through the bullet hole pool list 
@@ -67,10 +55,10 @@ public class Shoot : MonoBehaviour
                 _pool.bulletHoleList[i].SetActive(true);
                 _pool.bulletHoleList[i].transform.position = firePoint.transform.position;
                 //_pool.bulletHoleList[i].transform.rotation = firePoint.transform.rotation;
-               /*rb = _pool.bulletHoleList[i].GetComponent<Rigidbody2D>();
-                Vector2 force = transform.right * bulletSpeed;
-                rb.AddForce(force, ForceMode2D.Impulse);*/
-                
+                /*rb = _pool.bulletHoleList[i].GetComponent<Rigidbody2D>();
+                 Vector2 force = transform.right * bulletSpeed;
+                 rb.AddForce(force, ForceMode2D.Impulse);*/
+
                 break;
             }
             else
