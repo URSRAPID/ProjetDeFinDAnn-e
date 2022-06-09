@@ -10,7 +10,7 @@ public class EnemyController : MonoBehaviour
     public Transform firePoint;
 
     private float currentCoolDown;
-
+    private bool _isActive = false;
     //public float bulletSpeed = 10f;
 
 
@@ -29,16 +29,20 @@ public class EnemyController : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        currentCoolDown -= Time.deltaTime;
-        if (currentCoolDown <= 0)
+        if (_isActive == true)
         {
+            currentCoolDown -= Time.deltaTime;
+            if (currentCoolDown <= 0)
+            {
 
-            Debug.Log("Am Tras2");
-            Shooter();
-            currentCoolDown = cooldownSpawnPool;
-            currentCoolDown++;
+                Debug.Log("Am Tras2");
+                Shooter();
+                currentCoolDown = cooldownSpawnPool;
+                currentCoolDown++;
 
+            }
         }
+       
     }
 
 
@@ -80,9 +84,19 @@ public class EnemyController : MonoBehaviour
     }
     private void OnCollisionEnter2D(Collision2D collision)
     {
-        if (collision.gameObject.tag == "BalleCharacter")
+        if (collision.gameObject.tag == "BalleCharacter" )
         {
             Destroy(gameObject);
+        }
+        else if(collision.gameObject.tag == "MainCamera")
+        {
+            _isActive = true;
+        }
+        else if(collision.gameObject.tag == "BoxIsActive")
+        {
+            Destroy(gameObject);
+            _isActive = false;
+           
         }
     }
 

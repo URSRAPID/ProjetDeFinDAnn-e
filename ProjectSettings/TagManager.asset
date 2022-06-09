@@ -8,6 +8,8 @@ TagManager:
   - BalleCharacter
   - Character
   - BalleEnemy
+  - BoxIsActive
+  - BoxBalle
   layers:
   - Default
   - TransparentFX

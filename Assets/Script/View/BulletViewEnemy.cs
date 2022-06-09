@@ -26,7 +26,7 @@ public class BulletViewEnemy : MonoBehaviour
 
     private void OnCollisionEnter2D(Collision2D collision)
     {
-        if (collision.gameObject.tag == "Character")
+        if (collision.gameObject.tag == "Character" || collision.gameObject.tag == "BoxIsActive")
         {
             OnDisable();
         }
