@@ -11,6 +11,8 @@ public class Shoot : MonoBehaviour
 
     private float currentCoolDown;
 
+    private bool _isActive = false;
+
 
     // Start is called before the first frame update
     void Start()
@@ -27,24 +29,26 @@ public class Shoot : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        currentCoolDown -= Time.deltaTime;
-        if (currentCoolDown <= 0)
+        if (_isActive == true)
         {
-            if (Input.GetMouseButton(0))
+            currentCoolDown -= Time.deltaTime;
+            if (currentCoolDown <= 0)
             {
-                Debug.Log("Am Tras");
-                Shooter();
-                currentCoolDown = cooldownSpawnPool;
-                currentCoolDown++;
+                if (Input.GetMouseButton(0))
+                {
+                    Debug.Log("Am Tras");
+                    Shooter();
+                    currentCoolDown = cooldownSpawnPool;
+                    currentCoolDown++;
+                }
             }
         }
-        
     }
 
 
     void Shooter()
     {
-        
+
 
         // Instantiate bullet holes
         // Iterate through the bullet hole pool list 
@@ -60,10 +64,10 @@ public class Shoot : MonoBehaviour
                 _pool.bulletHoleList[i].SetActive(true);
                 _pool.bulletHoleList[i].transform.position = firePoint.transform.position;
                 //_pool.bulletHoleList[i].transform.rotation = firePoint.transform.rotation;
-               /*rb = _pool.bulletHoleList[i].GetComponent<Rigidbody2D>();
-                Vector2 force = transform.right * bulletSpeed;
-                rb.AddForce(force, ForceMode2D.Impulse);*/
-                
+                /*rb = _pool.bulletHoleList[i].GetComponent<Rigidbody2D>();
+                 Vector2 force = transform.right * bulletSpeed;
+                 rb.AddForce(force, ForceMode2D.Impulse);*/
+
                 break;
             }
             else
@@ -80,5 +84,12 @@ public class Shoot : MonoBehaviour
             }
         }
 
+    }
+    private void OnCollisionEnter2D(Collision2D collision)
+    {
+        if (collision.gameObject.tag == "BoxFireActive")
+        {
+            _isActive = true;
+        }
     }
 }

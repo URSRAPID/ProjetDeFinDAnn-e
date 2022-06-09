@@ -10,6 +10,7 @@ TagManager:
   - BalleEnemy
   - BoxIsActive
   - BoxBalle
+  - BoxFireActive
   layers:
   - Default
   - TransparentFX
