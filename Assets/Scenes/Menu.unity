@@ -326,8 +326,8 @@ Canvas:
   m_GameObject: {fileID: 530467399}
   m_Enabled: 1
   serializedVersion: 3
-  m_RenderMode: 0
-  m_Camera: {fileID: 0}
+  m_RenderMode: 1
+  m_Camera: {fileID: 531479346}
   m_PlaneDistance: 100
   m_PixelPerfect: 0
   m_ReceivesEvents: 1
@@ -482,6 +482,7 @@ GameObject:
   - component: {fileID: 531479347}
   - component: {fileID: 531479346}
   - component: {fileID: 531479345}
+  - component: {fileID: 531479348}
   m_Layer: 0
   m_Name: Main Camera
   m_TagString: MainCamera
@@ -554,6 +555,23 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &531479348
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 531479344}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 870b9a8f0f82f4f56800cc427bcd1025, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _scanLineJitter: 0
+  _verticalJump: 0
+  _horizontalShake: 0
+  _colorDrift: 0
+  _shader: {fileID: 4800000, guid: da33272284ea24f208f36998880990be, type: 3}
 --- !u!1 &571482351
 GameObject:
   m_ObjectHideFlags: 0
@@ -927,7 +945,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 40029f3f5a3b8da48a0e59d35ac37ae1, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  sfxButton: {fileID: 8300000, guid: 91093c45571d9404bac89bee77fb15d8, type: 3}
+  GlitchEffect: {fileID: 531479348}
+  source: {fileID: 530467404}
+  clip: {fileID: 8300000, guid: 91093c45571d9404bac89bee77fb15d8, type: 3}
   preMenu: {fileID: 1025965730}
 --- !u!1 &1270629047
 GameObject:
