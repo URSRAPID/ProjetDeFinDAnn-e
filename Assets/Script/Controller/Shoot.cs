@@ -11,9 +11,11 @@ public class Shoot : MonoBehaviour
 
     private float currentCoolDown;
 
-    public float bulletSpeed = 10f;
+    //public float bulletSpeed = 10f;
 
-    private float timeSpawn = 2f;
+    
+
+  
 
     Rigidbody2D rb;
 
@@ -65,9 +67,10 @@ public class Shoot : MonoBehaviour
                 _pool.bulletHoleList[i].SetActive(true);
                 _pool.bulletHoleList[i].transform.position = firePoint.transform.position;
                 //_pool.bulletHoleList[i].transform.rotation = firePoint.transform.rotation;
-                rb = _pool.bulletHoleList[i].GetComponent<Rigidbody2D>();
+               /*rb = _pool.bulletHoleList[i].GetComponent<Rigidbody2D>();
                 Vector2 force = transform.right * bulletSpeed;
-                rb.AddForce(force, ForceMode2D.Impulse);
+                rb.AddForce(force, ForceMode2D.Impulse);*/
+                
                 break;
             }
             else

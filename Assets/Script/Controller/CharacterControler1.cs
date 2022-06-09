@@ -29,6 +29,7 @@ public class CharacterControler1 : MonoBehaviour
     {
         Debug.Log("-1");
         characterModel.AddLife(-1);
+        
     }
 
     private void OnCollisionEnter2D(Collision2D collision)
@@ -36,6 +37,7 @@ public class CharacterControler1 : MonoBehaviour
         if (collision.gameObject.tag == "Enemy")
         {
             OnDamage();
+            
         }
     }
 }
