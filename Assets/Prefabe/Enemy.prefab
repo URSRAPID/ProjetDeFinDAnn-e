@@ -146,7 +146,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 6f22b7613e6a3594caaef5848e38b165, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  cooldownSpawnPool: -0.82
+  cooldownSpawnPool: -0.48
   firePoint: {fileID: 8563638448631562677}
 --- !u!50 &-8462996395797936332
 Rigidbody2D:

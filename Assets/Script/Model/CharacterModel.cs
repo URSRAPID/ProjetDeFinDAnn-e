@@ -1,7 +1,7 @@
 
 using UnityEngine;
 
-public class CharacterModel : MonoBehaviour
+public class CharacterModel 
 {
     public VectorObservable _position;
     private FloatObservable _life;
