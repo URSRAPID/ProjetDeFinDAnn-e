@@ -19,7 +19,7 @@ public class VectorObservable : IObservable<Vector2>
     {
         return _position;
     }
-
+  
     public void SetValue(Vector2 newPosition)
     {
         _position = newPosition;
