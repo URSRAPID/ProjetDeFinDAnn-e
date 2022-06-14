@@ -11,6 +11,7 @@ TagManager:
   - BoxIsActive
   - BoxBalle
   - BoxFireActive
+  - BouclierCharacter
   layers:
   - Default
   - TransparentFX

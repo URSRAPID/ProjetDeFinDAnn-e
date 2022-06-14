@@ -4,30 +4,68 @@ using UnityEngine;
 public class CharacterControler1 : MonoBehaviour
 {
     [SerializeField] private LifeView lifeView;
+    [SerializeField] private MpView mpView;
     [SerializeField] private PositionView positionView;
+
+    [SerializeField] private Transform cam;
+
     private CharacterModel characterModel;
 
+    [SerializeField] private GameObject bouclierCharacter;
 
     [SerializeField] private float speed = 5;
     [SerializeField] private float speedCam = 5;
 
+    [SerializeField] private float deltaY;
+    [SerializeField] private float deltaX;
+    [SerializeField] private float deltaminY;
+    [SerializeField] private float deltaminX;
     void Start()
     {
-        characterModel = new CharacterModel(-10,0, 3, 3);
+        
+        characterModel = new CharacterModel(-10,0, 3, 3 , 10000,10000);
         characterModel.GetLife().Subscribe(lifeView);
         characterModel.GetPosition().Subscribe(positionView);
+        characterModel.GetMp().Subscribe(mpView);
+        bouclierCharacter.gameObject.SetActive(false);
+
+
     }
     void Update()
     {
-        characterModel.AddPosition(new Vector2(speedCam * Time.deltaTime, 0));
-        characterModel.AddPosition(new Vector2(Input.GetAxis("Horizontal") * speed * Time.deltaTime,
-        Input.GetAxis("Vertical") * speed * Time.deltaTime));
+        float deltaPositionV = Input.GetAxis("Vertical") * speed * Time.deltaTime;
+        float deltaPositionH = Input.GetAxis("Horizontal") * speed * Time.deltaTime;
+        Vector2 deltaPosition = new Vector2(deltaPositionH, deltaPositionV);
+
+        Debug.Log("Vertical:" + Input.GetAxis("Vertical"));
+        Debug.Log("Horizontal:" + Input.GetAxis("Horizontal"));
+
+        BouclierActive();
+
+        if (characterModel.GetPosition().GetValue().y + deltaPosition.y >= cam.transform.position.y + deltaY )
+        {
+            deltaPosition.y = 0F;
+            
+        }
+        if (characterModel.GetPosition().GetValue().x + deltaPosition.x >= cam.transform.position.x + deltaX)
+        {
+            deltaPosition.x = 0F;
+           
+        }
+        if (characterModel.GetPosition().GetValue().y + deltaPosition.y <= cam.transform.position.y + deltaminY)
+        {
+            deltaPosition.y = 0F;   
+        }
+        if (characterModel.GetPosition().GetValue().x + deltaPosition.x <= cam.transform.position.x + deltaminX)
+        {
+            deltaPosition.x = 0F; 
+        }
+        characterModel.AddPosition(new Vector2(speedCam * Time.deltaTime, 0) + deltaPosition);
 
     }
 
     public void OnDamage()
     {
-        Debug.Log("-1");
         characterModel.AddLife(-1);
         
     }
@@ -38,6 +76,23 @@ public class CharacterControler1 : MonoBehaviour
         {
             OnDamage();
             
+        }
+    }
+
+    private void BouclierActive()
+    {
+        if (characterModel.GetMp().GetValue().GetValue() > 0)
+        {
+            if (Input.GetMouseButton(1))
+            {
+                bouclierCharacter.gameObject.SetActive(true);
+                characterModel.AddMp(-1);
+            }
+        }
+        
+        if (Input.GetMouseButtonUp(1))
+        {
+            bouclierCharacter.gameObject.SetActive(false);
         }
     }
 }

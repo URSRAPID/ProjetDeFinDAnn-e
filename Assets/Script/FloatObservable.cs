@@ -14,7 +14,10 @@ public class FloatObservable : IObservable<FloatNormalizable>
         _value = new FloatNormalizable(initValue, maxValue);
         _observers = new List<IObserver<FloatNormalizable>>();
     }
-
+    public FloatNormalizable GetValue()
+    {
+        return _value;
+    }
     public void Add(float deltaValue)
     {
         _value.SetValue(_value.GetValue() + deltaValue);

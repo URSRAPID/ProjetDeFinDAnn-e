@@ -7,12 +7,18 @@ public class Shoot : MonoBehaviour
     [SerializeField] private float cooldownSpawnPool;
 
     [SerializeField] private PoolManager _pool;
+
+    [SerializeField]
+    private GameObject bouclier;
+
     public Transform firePoint;
 
     private float currentCoolDown;
 
-    private bool _isActive = false;
+    [SerializeField] private bool _isActive;
 
+    /* public float bulletSpeed;
+    private Rigidbody2D rb;*/
 
     // Start is called before the first frame update
     void Start()
@@ -29,20 +35,27 @@ public class Shoot : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        if (_isActive == true)
+        if (bouclier.gameObject.active == false)
         {
-            currentCoolDown -= Time.deltaTime;
-            if (currentCoolDown <= 0)
+            if (_isActive == true)
             {
-                if (Input.GetMouseButton(0))
+                currentCoolDown -= Time.deltaTime;
+                if (currentCoolDown <= 0)
                 {
-                    Debug.Log("Am Tras");
-                    Shooter();
-                    currentCoolDown = cooldownSpawnPool;
-                    currentCoolDown++;
+                    if (Input.GetMouseButton(0))
+                    {
+                        Debug.Log("Am Tras");
+                        Shooter();
+
+                        currentCoolDown = cooldownSpawnPool;
+                        currentCoolDown++;
+                    }
                 }
             }
         }
+        
+
+
     }
 
 
@@ -65,8 +78,8 @@ public class Shoot : MonoBehaviour
                 _pool.bulletHoleList[i].transform.position = firePoint.transform.position;
                 //_pool.bulletHoleList[i].transform.rotation = firePoint.transform.rotation;
                 /*rb = _pool.bulletHoleList[i].GetComponent<Rigidbody2D>();
-                 Vector2 force = transform.right * bulletSpeed;
-                 rb.AddForce(force, ForceMode2D.Impulse);*/
+                Vector2 force = transform.right * bulletSpeed;
+                rb.AddForce(force, ForceMode2D.Impulse);*/
 
                 break;
             }
