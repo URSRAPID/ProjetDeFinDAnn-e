@@ -11,7 +11,9 @@ public class CharacterControler1 : MonoBehaviour
 
     private CharacterModel characterModel;
 
-    [SerializeField] private GameObject bouclierCharacter;
+    
+    [SerializeField] private BouclierView bouclierView;
+    
 
     [SerializeField] private float speed = 5;
     [SerializeField] private float speedCam = 5;
@@ -20,6 +22,8 @@ public class CharacterControler1 : MonoBehaviour
     [SerializeField] private float deltaX;
     [SerializeField] private float deltaminY;
     [SerializeField] private float deltaminX;
+
+    [SerializeField] private float deltaPositionBouclier;
     void Start()
     {
         
@@ -27,9 +31,6 @@ public class CharacterControler1 : MonoBehaviour
         characterModel.GetLife().Subscribe(lifeView);
         characterModel.GetPosition().Subscribe(positionView);
         characterModel.GetMp().Subscribe(mpView);
-        bouclierCharacter.gameObject.SetActive(false);
-
-
     }
     void Update()
     {
@@ -39,6 +40,8 @@ public class CharacterControler1 : MonoBehaviour
 
         Debug.Log("Vertical:" + Input.GetAxis("Vertical"));
         Debug.Log("Horizontal:" + Input.GetAxis("Horizontal"));
+
+        
 
         BouclierActive();
 
@@ -62,6 +65,7 @@ public class CharacterControler1 : MonoBehaviour
         }
         characterModel.AddPosition(new Vector2(speedCam * Time.deltaTime, 0) + deltaPosition);
 
+        bouclierView.transform.position = new Vector2(characterModel.GetPosition().GetValue().x + deltaPositionBouclier, characterModel.GetPosition().GetValue().y);
     }
 
     public void OnDamage()
@@ -85,14 +89,14 @@ public class CharacterControler1 : MonoBehaviour
         {
             if (Input.GetMouseButton(1))
             {
-                bouclierCharacter.gameObject.SetActive(true);
-                characterModel.AddMp(-1);
+                bouclierView.gameObject.SetActive(true);
+                characterModel.AddMp(-10);
             }
         }
         
         if (Input.GetMouseButtonUp(1))
         {
-            bouclierCharacter.gameObject.SetActive(false);
+            bouclierView.gameObject.SetActive(false);
         }
     }
 }

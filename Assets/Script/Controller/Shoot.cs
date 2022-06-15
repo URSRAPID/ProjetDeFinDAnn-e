@@ -9,7 +9,7 @@ public class Shoot : MonoBehaviour
     [SerializeField] private PoolManager _pool;
 
     [SerializeField]
-    private GameObject bouclier;
+    private BouclierView bouclier;
 
     public Transform firePoint;
 
@@ -42,18 +42,17 @@ public class Shoot : MonoBehaviour
                 currentCoolDown -= Time.deltaTime;
                 if (currentCoolDown <= 0)
                 {
-                    if (Input.GetMouseButton(0))
-                    {
-                        Debug.Log("Am Tras");
-                        Shooter();
 
-                        currentCoolDown = cooldownSpawnPool;
-                        currentCoolDown++;
-                    }
+                    Debug.Log("Am Tras");
+                    Shooter();
+
+                    currentCoolDown = cooldownSpawnPool;
+                    currentCoolDown++;
+
                 }
             }
         }
-        
+
 
 
     }
