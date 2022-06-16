@@ -16,7 +16,7 @@ public class BulletViewEnemy : MonoBehaviour
 
     void OnEnable()
     {
-        Invoke("OnDisable", 5.0f);
+        //Invoke("OnDisable", 5.0f);
     }
 
     private void OnDisable()
@@ -26,7 +26,15 @@ public class BulletViewEnemy : MonoBehaviour
 
     private void OnCollisionEnter2D(Collision2D collision)
     {
-        if (collision.gameObject.tag == "Character" || collision.gameObject.tag == "BoxIsActive" || collision.gameObject.tag == "BouclierCharacter")
+        if (collision.gameObject.tag == "Character"  )
+        {
+            OnDisable();
+        }
+        else if (collision.gameObject.tag == "BoxIsActive")
+        {
+            OnDisable();
+        }
+        else if (collision.gameObject.tag == "BouclierCharacter")
         {
             OnDisable();
         }

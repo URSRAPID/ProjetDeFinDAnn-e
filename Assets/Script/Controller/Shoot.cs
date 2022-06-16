@@ -17,12 +17,15 @@ public class Shoot : MonoBehaviour
 
     [SerializeField] private bool _isActive;
 
-    /* public float bulletSpeed;
-    private Rigidbody2D rb;*/
+    // public float bulletSpeed;
+
+    //private Rigidbody2D rb2D;
 
     // Start is called before the first frame update
     void Start()
     {
+        
+
         _pool = GameObject.FindObjectOfType<PoolManager>();
         if (cooldownSpawnPool == 0)
         {
@@ -35,6 +38,7 @@ public class Shoot : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
+
         if (bouclier.gameObject.active == false)
         {
             if (_isActive == true)

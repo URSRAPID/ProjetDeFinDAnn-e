@@ -24,6 +24,12 @@ public class CharacterControler1 : MonoBehaviour
     [SerializeField] private float deltaminX;
 
     [SerializeField] private float deltaPositionBouclier;
+
+
+    
+
+    
+
     void Start()
     {
         
@@ -31,6 +37,7 @@ public class CharacterControler1 : MonoBehaviour
         characterModel.GetLife().Subscribe(lifeView);
         characterModel.GetPosition().Subscribe(positionView);
         characterModel.GetMp().Subscribe(mpView);
+        
     }
     void Update()
     {
@@ -38,11 +45,7 @@ public class CharacterControler1 : MonoBehaviour
         float deltaPositionH = Input.GetAxis("Horizontal") * speed * Time.deltaTime;
         Vector2 deltaPosition = new Vector2(deltaPositionH, deltaPositionV);
 
-        Debug.Log("Vertical:" + Input.GetAxis("Vertical"));
-        Debug.Log("Horizontal:" + Input.GetAxis("Horizontal"));
-
-        
-
+     
         BouclierActive();
 
         if (characterModel.GetPosition().GetValue().y + deltaPosition.y >= cam.transform.position.y + deltaY )
@@ -63,9 +66,21 @@ public class CharacterControler1 : MonoBehaviour
         {
             deltaPosition.x = 0F; 
         }
+        
+
         characterModel.AddPosition(new Vector2(speedCam * Time.deltaTime, 0) + deltaPosition);
 
         bouclierView.transform.position = new Vector2(characterModel.GetPosition().GetValue().x + deltaPositionBouclier, characterModel.GetPosition().GetValue().y);
+
+        /* RaycastHit2D hit = Physics2D.Raycast(transform.position, -Vector2.up);
+
+        if (hit.collider != null)
+        {
+            Debug.Log("Hit:" + hit.collider.name);
+            deltaPosition.y = 0F;
+        }
+        */
+
     }
 
     public void OnDamage()
