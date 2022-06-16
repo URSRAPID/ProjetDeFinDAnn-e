@@ -105,7 +105,7 @@ public class CharacterControler1 : MonoBehaviour
             if (Input.GetMouseButton(1))
             {
                 bouclierView.gameObject.SetActive(true);
-                characterModel.AddMp(-10);
+                characterModel.AddMp(-5);
             }
         }
         

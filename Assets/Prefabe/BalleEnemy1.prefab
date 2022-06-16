@@ -10,8 +10,8 @@ GameObject:
   m_Component:
   - component: {fileID: 9222328522006756427}
   - component: {fileID: 1356422854525889629}
-  - component: {fileID: -6969365491157231257}
   - component: {fileID: -716168934656945231}
+  - component: {fileID: -8998380391126269362}
   m_Layer: 0
   m_Name: BalleEnemy1
   m_TagString: BalleEnemy
@@ -84,22 +84,6 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
---- !u!58 &-6969365491157231257
-CircleCollider2D:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 7342689394327939201}
-  m_Enabled: 1
-  m_Density: 1
-  m_Material: {fileID: 0}
-  m_IsTrigger: 0
-  m_UsedByEffector: 0
-  m_UsedByComposite: 0
-  m_Offset: {x: 0, y: 0}
-  serializedVersion: 2
-  m_Radius: 0.49999997
 --- !u!114 &-716168934656945231
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -114,3 +98,29 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   bullet: {fileID: 7342689394327939201}
   _speedBullet: 6
+--- !u!61 &-8998380391126269362
+BoxCollider2D:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7342689394327939201}
+  m_Enabled: 1
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_UsedByEffector: 0
+  m_UsedByComposite: 0
+  m_Offset: {x: -1.6326962, y: 0.14531863}
+  m_SpriteTilingProperty:
+    border: {x: 0, y: 0, z: 0, w: 0}
+    pivot: {x: 0.5, y: 0.5}
+    oldSize: {x: 7.72, y: 6.32}
+    newSize: {x: 1, y: 1}
+    adaptiveTilingThreshold: 0.5
+    drawMode: 0
+    adaptiveTiling: 0
+  m_AutoTiling: 0
+  serializedVersion: 2
+  m_Size: {x: 2.4714365, y: 2.2339857}
+  m_EdgeRadius: 0
