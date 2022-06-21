@@ -11,9 +11,9 @@ public class CharacterControler1 : MonoBehaviour
 
     private CharacterModel characterModel;
 
-    
+
     [SerializeField] private BouclierView bouclierView;
-    
+
 
     [SerializeField] private float speed = 5;
     [SerializeField] private float speedCam = 5;
@@ -25,68 +25,102 @@ public class CharacterControler1 : MonoBehaviour
 
     [SerializeField] private float deltaPositionBouclier;
 
+    // Points de détection de collision inférieurs gauche et droit
+    public Transform downLeft;
+    public Transform downRight;
 
-    
+    //Points de détection de collision supérieurs gauche et droit 
+    public Transform upLeft;
+    public Transform upRight;
 
-    
+
+    //Points de détection de collision gauche Haut et bas
+    public Transform leftUp;
+    public Transform leftDown;
+
+    //Points de détection de collision droit Haut et bas
+    public Transform rightUp;
+    public Transform rightDown;
+
+    public LayerMask groundLayerMask;
+    public bool isCollisonDown = false;
+    public bool isCollisonUp = false;
+    public bool isCollisonLeft = false;
+    public bool isCollisonRight = false;
+
+    public float rayLength = 0.5f;
 
     void Start()
     {
-        
-        characterModel = new CharacterModel(-10,0, 3, 3 , 10000,10000);
+
+        characterModel = new CharacterModel(-10, 0, 3, 3, 10000, 10000);
         characterModel.GetLife().Subscribe(lifeView);
         characterModel.GetPosition().Subscribe(positionView);
         characterModel.GetMp().Subscribe(mpView);
-        
+
     }
     void Update()
     {
+
+        DetectionCollisionMur();
+        Vector2 moveCam = new Vector2(speedCam * Time.deltaTime, 0);
         float deltaPositionV = Input.GetAxis("Vertical") * speed * Time.deltaTime;
         float deltaPositionH = Input.GetAxis("Horizontal") * speed * Time.deltaTime;
+        if (deltaPositionV < 0 && isCollisonDown)
+        {
+            deltaPositionV = 0;
+        }
+        if (deltaPositionV > 0 && isCollisonUp)
+        {
+            deltaPositionV = 0;
+        }
+        if (deltaPositionH < 0 && isCollisonLeft)
+        {
+            deltaPositionH = 0;
+        }
+        if (deltaPositionH > 0 && isCollisonRight)
+        {
+            deltaPositionH = 0;
+            speedCam = 0;
+        }
         Vector2 deltaPosition = new Vector2(deltaPositionH, deltaPositionV);
 
-     
+
         BouclierActive();
 
-        if (characterModel.GetPosition().GetValue().y + deltaPosition.y >= cam.transform.position.y + deltaY )
+        if (characterModel.GetPosition().GetValue().y + deltaPosition.y >= cam.transform.position.y + deltaY)
         {
             deltaPosition.y = 0F;
-            
+
         }
         if (characterModel.GetPosition().GetValue().x + deltaPosition.x >= cam.transform.position.x + deltaX)
         {
             deltaPosition.x = 0F;
-           
+
         }
         if (characterModel.GetPosition().GetValue().y + deltaPosition.y <= cam.transform.position.y + deltaminY)
         {
-            deltaPosition.y = 0F;   
+            deltaPosition.y = 0F;
         }
         if (characterModel.GetPosition().GetValue().x + deltaPosition.x <= cam.transform.position.x + deltaminX)
         {
-            deltaPosition.x = 0F; 
+            deltaPosition.x = 0F;
         }
+
         
 
-        characterModel.AddPosition(new Vector2(speedCam * Time.deltaTime, 0) + deltaPosition);
 
+        characterModel.AddPosition(moveCam + deltaPosition);
+       
+       
         bouclierView.transform.position = new Vector2(characterModel.GetPosition().GetValue().x + deltaPositionBouclier, characterModel.GetPosition().GetValue().y);
-
-        /* RaycastHit2D hit = Physics2D.Raycast(transform.position, -Vector2.up);
-
-        if (hit.collider != null)
-        {
-            Debug.Log("Hit:" + hit.collider.name);
-            deltaPosition.y = 0F;
-        }
-        */
 
     }
 
     public void OnDamage()
     {
         characterModel.AddLife(-1);
-        
+
     }
 
     private void OnCollisionEnter2D(Collision2D collision)
@@ -94,7 +128,7 @@ public class CharacterControler1 : MonoBehaviour
         if (collision.gameObject.tag == "Enemy" || collision.gameObject.tag == "BalleEnemy")
         {
             OnDamage();
-            
+
         }
     }
 
@@ -108,11 +142,79 @@ public class CharacterControler1 : MonoBehaviour
                 characterModel.AddMp(-5);
             }
         }
-        
+
         if (Input.GetMouseButtonUp(1))
         {
             bouclierView.gameObject.SetActive(false);
         }
     }
+
+    void OnDrawGizmos()
+    {
+        Gizmos.color = Color.magenta;
+
+        Gizmos.DrawLine(downLeft.position, new Vector2(downLeft.position.x, downLeft.position.y - rayLength));
+        Gizmos.DrawLine(downRight.position, new Vector2(downRight.position.x, downRight.position.y - rayLength));
+
+        Gizmos.DrawLine(upLeft.position, new Vector2(upLeft.position.x, upLeft.position.y + rayLength));
+        Gizmos.DrawLine(upRight.position, new Vector2(upRight.position.x, upRight.position.y + rayLength));
+
+        Gizmos.DrawLine(leftUp.position, new Vector2(leftUp.position.x - rayLength, leftUp.position.y));
+        Gizmos.DrawLine(leftDown.position, new Vector2(leftDown.position.x - rayLength, leftDown.position.y));
+
+        Gizmos.DrawLine(rightUp.position, new Vector2(rightUp.position.x + rayLength, rightUp.position.y));
+        Gizmos.DrawLine(rightDown.position, new Vector2(rightDown.position.x + rayLength, rightDown.position.y));
+    }
+    
+    void DetectionCollisionMur()
+    {
+        RaycastHit2D downLeftHit = Physics2D.Raycast(downLeft.position, Vector2.down, rayLength, groundLayerMask);
+        RaycastHit2D downRightHit = Physics2D.Raycast(downRight.position, Vector2.down, rayLength, groundLayerMask);
+        if (downLeftHit.collider != null || downRightHit.collider != null)
+        {
+            isCollisonDown = true;
+
+        }
+        else
+        {
+            isCollisonDown = false;
+        }
+
+        RaycastHit2D upLeftHit = Physics2D.Raycast(upLeft.position, Vector2.up, rayLength, groundLayerMask);
+        RaycastHit2D upRightHit = Physics2D.Raycast(upRight.position, Vector2.up, rayLength, groundLayerMask);
+        if (upLeftHit.collider != null || upRightHit.collider != null)
+        {
+            isCollisonUp = true;
+        }
+        else
+        {
+            isCollisonUp = false;
+        }
+
+        RaycastHit2D leftUpHit = Physics2D.Raycast(leftUp.position, Vector2.left, rayLength, groundLayerMask);
+        RaycastHit2D leftDownHit = Physics2D.Raycast(leftDown.position, Vector2.left, rayLength, groundLayerMask);
+        if (leftUpHit.collider != null || leftDownHit.collider != null)
+        {
+            isCollisonLeft = true;
+        }
+        else
+        {
+            isCollisonLeft = false;
+        }
+
+        RaycastHit2D rightUpHit = Physics2D.Raycast(rightUp.position, Vector2.right, rayLength, groundLayerMask);
+        RaycastHit2D rightDownHit = Physics2D.Raycast(rightDown.position, Vector2.right, rayLength, groundLayerMask);
+        if (rightUpHit.collider != null || rightDownHit.collider != null)
+        {
+            isCollisonRight = true;
+        }
+        else
+        {
+            isCollisonRight = false;
+            speedCam = 5;
+        }
+
+    }
+    
 }
 
