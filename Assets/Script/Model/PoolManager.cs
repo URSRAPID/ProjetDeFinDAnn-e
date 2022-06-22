@@ -11,9 +11,11 @@ public class PoolManager : MonoBehaviour
 
     //list of objects that can be used 
     public List<GameObject> bulletHoleList;
-    
+
+
     void Start()
     {
+        
         for (int i = 0; i < spawnCount; i++)
         {
            GameObject bullet = Instantiate(bulletHolePrefab, firePoint.transform.position, firePoint.transform.rotation);
@@ -22,6 +24,4 @@ public class PoolManager : MonoBehaviour
             bullet.SetActive(false);
         }  
     }
-
-    
 }

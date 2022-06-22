@@ -17,13 +17,31 @@ public class Shoot : MonoBehaviour
 
     [SerializeField] private bool _isActive;
 
-    // public float bulletSpeed;
 
-    //private Rigidbody2D rb2D;
 
-    // Start is called before the first frame update
+    [SerializeField]
+    int numberOfProjectiles;
+
+    [SerializeField]
+    GameObject projectile;
+
+
+    Vector2 startPoint;
+
+    float radius;
+
+
+    [SerializeField]
+    float angleShoot;
+
+    [SerializeField]
+    float moveSpeed;
+
+
+
     void Start()
     {
+        radius = 5f;
         
 
         _pool = GameObject.FindObjectOfType<PoolManager>();
@@ -48,7 +66,7 @@ public class Shoot : MonoBehaviour
                 {
 
                     Debug.Log("Am Tras");
-                    Shooter();
+                    Shooter(numberOfProjectiles);
 
                     currentCoolDown = cooldownSpawnPool;
                     currentCoolDown++;
@@ -62,9 +80,19 @@ public class Shoot : MonoBehaviour
     }
 
 
-    void Shooter()
+    void Shooter(int numberOfProjectiles)
     {
-
+        float angle2 = angleShoot;
+        if (numberOfProjectiles == 1)
+        {
+            angle2 = 0f;
+        }
+        if (numberOfProjectiles == 2)
+        {
+            angle2 = 1.7f;
+        }
+        float angleStep = angle2 / (numberOfProjectiles - 1) ;
+        float angle = 90f - angle2 / 2f;
 
         // Instantiate bullet holes
         // Iterate through the bullet hole pool list 
@@ -73,30 +101,41 @@ public class Shoot : MonoBehaviour
         // position of the object matches hitInfo Point 
         // Adjust rotation to surface normal 
 
-        for (int i = 0; i < _pool.bulletHoleList.Count; i++)
+        for (int j = 0; j <= numberOfProjectiles - 1; j++)
         {
-            if (_pool.bulletHoleList[i].activeInHierarchy == false)
-            {
-                _pool.bulletHoleList[i].SetActive(true);
-                _pool.bulletHoleList[i].transform.position = firePoint.transform.position;
-                //_pool.bulletHoleList[i].transform.rotation = firePoint.transform.rotation;
-                /*rb = _pool.bulletHoleList[i].GetComponent<Rigidbody2D>();
-                Vector2 force = transform.right * bulletSpeed;
-                rb.AddForce(force, ForceMode2D.Impulse);*/
 
-                break;
-            }
-            else
+            for (int i = 0; i < _pool.bulletHoleList.Count; i++)
             {
-                //create a new bullet. ONLY if we're on the last item of the list 
-                if (i == _pool.bulletHoleList.Count - 1)
+                if (_pool.bulletHoleList[i].activeInHierarchy == false)
                 {
-                    // Last Bullet 
-                    GameObject newBullet = Instantiate(_pool.bulletHolePrefab) as GameObject;
-                    newBullet.transform.parent = _pool.transform;
-                    newBullet.SetActive(false);
-                    _pool.bulletHoleList.Add(newBullet);
+                    _pool.bulletHoleList[i].SetActive(true);
+                    _pool.bulletHoleList[i].transform.position = firePoint.transform.position;
+                    float projectileDirXposition = startPoint.x + Mathf.Sin((angle * Mathf.PI) / 180) * radius;
+                    float projectileDirYposition = startPoint.y + Mathf.Cos((angle * Mathf.PI) / 180) * radius;
+                    Vector2 projectileVector = new Vector2(projectileDirXposition, projectileDirYposition);
+                    Vector2 projectileMoveDirection = (projectileVector - startPoint).normalized * moveSpeed;
+
+                    _pool.bulletHoleList[i].GetComponent<BulletBehavior>()._speedBullet = new Vector2(projectileMoveDirection.x, projectileMoveDirection.y);
+                    //_pool.bulletHoleList[i].transform.rotation = firePoint.transform.rotation;
+                    /*rb = _pool.bulletHoleList[i].GetComponent<Rigidbody2D>();
+                    Vector2 force = transform.right * bulletSpeed;
+                    rb.AddForce(force, ForceMode2D.Impulse);*/
+                    angle += angleStep;
+                    break;
                 }
+                else
+                {
+                    //create a new bullet. ONLY if we're on the last item of the list 
+                    if (i == _pool.bulletHoleList.Count - 1)
+                    {
+                        // Last Bullet 
+                        GameObject newBullet = Instantiate(_pool.bulletHolePrefab) as GameObject;
+                        newBullet.transform.parent = _pool.transform;
+                        newBullet.SetActive(false);
+                        _pool.bulletHoleList.Add(newBullet);
+                    }
+                }
+
             }
         }
 
@@ -108,4 +147,6 @@ public class Shoot : MonoBehaviour
             _isActive = true;
         }
     }
+
+
 }

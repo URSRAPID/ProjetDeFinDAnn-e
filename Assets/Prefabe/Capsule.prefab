@@ -14,7 +14,7 @@ GameObject:
   - component: {fileID: -4980018512548372620}
   - component: {fileID: -3196211214173148154}
   - component: {fileID: -5039103418662350299}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: Capsule
   m_TagString: BalleCharacter
   m_Icon: {fileID: 0}

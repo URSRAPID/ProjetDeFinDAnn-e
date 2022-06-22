@@ -99,7 +99,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   spline: {fileID: 0}
-  travelMode: 1
+  travelMode: 2
   speed: 5
   m_normalizedT: 0
   rotationLerpModifier: 10

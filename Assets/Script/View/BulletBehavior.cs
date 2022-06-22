@@ -4,12 +4,12 @@ using UnityEngine;
 
 public class BulletBehavior : MonoBehaviour
 {
-    public float _speedBullet;
+    public Vector2 _speedBullet;
   
     private void Update()
     {
-
-        transform.position = transform.position + new Vector3(_speedBullet * Time.deltaTime , 0f, 0f);
+        
+        transform.position = transform.position + (Vector3)_speedBullet * Time.deltaTime;
         
     }
 
