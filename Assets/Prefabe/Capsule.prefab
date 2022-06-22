@@ -75,7 +75,7 @@ SpriteRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 9
-  m_Sprite: {fileID: -6845844800033933118, guid: 25fa77f158cd62b4bb02741db4f27776, type: 3}
+  m_Sprite: {fileID: 21300000, guid: 86a937d16330765409aaff59d76eb926, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
@@ -98,7 +98,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 6a6439f0056b5dc459708cd703e83350, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _speedBullet: 16
+  _speedBullet: {x: 0, y: 0}
 --- !u!58 &-4980018512548372620
 CircleCollider2D:
   m_ObjectHideFlags: 0
@@ -124,7 +124,7 @@ Animation:
   m_GameObject: {fileID: 3862605388609250188}
   m_Enabled: 1
   serializedVersion: 3
-  m_Animation: {fileID: 7400000, guid: aeb5389cf02982745982798acca6f40d, type: 2}
+  m_Animation: {fileID: 0}
   m_Animations: []
   m_WrapMode: 0
   m_PlayAutomatically: 1
@@ -140,7 +140,7 @@ Animator:
   m_GameObject: {fileID: 3862605388609250188}
   m_Enabled: 1
   m_Avatar: {fileID: 0}
-  m_Controller: {fileID: 9100000, guid: a18d3e20d90703748b88b46b9328ae0d, type: 2}
+  m_Controller: {fileID: 0}
   m_CullingMode: 0
   m_UpdateMode: 0
   m_ApplyRootMotion: 0
