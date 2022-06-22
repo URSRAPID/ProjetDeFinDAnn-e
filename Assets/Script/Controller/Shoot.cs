@@ -6,10 +6,7 @@ public class Shoot : MonoBehaviour
 
     [SerializeField] private float cooldownSpawnPool;
 
-    [SerializeField] private PoolManager _pool;
-
-    [SerializeField]
-    private BouclierView bouclier;
+     private PoolManager _pool;
 
     public Transform firePoint;
 
@@ -21,10 +18,6 @@ public class Shoot : MonoBehaviour
 
     [SerializeField]
     int numberOfProjectiles;
-
-    [SerializeField]
-    GameObject projectile;
-
 
     Vector2 startPoint;
 
@@ -56,8 +49,11 @@ public class Shoot : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
+        if (Input.GetMouseButton(0))
+        { 
 
-        if (bouclier.gameObject.active == false)
+        }
+        else
         {
             if (_isActive == true)
             {
@@ -74,6 +70,7 @@ public class Shoot : MonoBehaviour
                 }
             }
         }
+        
 
 
 

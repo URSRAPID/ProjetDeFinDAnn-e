@@ -50,6 +50,8 @@ public class CharacterControler1 : MonoBehaviour
 
     public float rayLength = 0.5f;
 
+
+    private float minMP = 0f;
     void Start()
     {
 
@@ -88,6 +90,8 @@ public class CharacterControler1 : MonoBehaviour
 
         BouclierActive();
 
+
+        //Gestion de délimitation pour le character dans la caméra
         if (characterModel.GetPosition().GetValue().y + deltaPosition.y >= cam.transform.position.y + deltaY)
         {
             deltaPosition.y = 0F;
@@ -136,14 +140,18 @@ public class CharacterControler1 : MonoBehaviour
     {
         if (characterModel.GetMp().GetValue().GetValue() > 0)
         {
-            if (Input.GetMouseButton(1))
+            if (Input.GetMouseButton(0))
             {
                 bouclierView.gameObject.SetActive(true);
                 characterModel.AddMp(-5);
             }
+            else
+            {
+                bouclierView.gameObject.SetActive(false);
+            }
         }
 
-        if (Input.GetMouseButtonUp(1))
+        if (characterModel.GetMp().GetValue().GetValue() <= minMP) 
         {
             bouclierView.gameObject.SetActive(false);
         }
