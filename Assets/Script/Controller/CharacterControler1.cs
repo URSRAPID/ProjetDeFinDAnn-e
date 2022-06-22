@@ -224,5 +224,6 @@ public class CharacterControler1 : MonoBehaviour
 
     }
     
+
 }
 

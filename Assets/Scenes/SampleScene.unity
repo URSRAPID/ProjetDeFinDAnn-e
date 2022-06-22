@@ -5212,7 +5212,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   cooldownSpawnPool: -0.64
   firePoint: {fileID: 1380042918}
-  _isActive: 1
+  _isActive: 0
   numberOfProjectiles: 6
   angleShoot: 30
   moveSpeed: 15

@@ -6,7 +6,7 @@ public class Shoot : MonoBehaviour
 
     [SerializeField] private float cooldownSpawnPool;
 
-     private PoolManager _pool;
+    private PoolManager _pool;
 
     public Transform firePoint;
 
@@ -14,6 +14,7 @@ public class Shoot : MonoBehaviour
 
     [SerializeField] private bool _isActive;
 
+    private BouclierView bouclier;
 
 
     [SerializeField]
@@ -35,7 +36,7 @@ public class Shoot : MonoBehaviour
     void Start()
     {
         radius = 5f;
-        
+
 
         _pool = GameObject.FindObjectOfType<PoolManager>();
         if (cooldownSpawnPool == 0)
@@ -50,8 +51,9 @@ public class Shoot : MonoBehaviour
     void Update()
     {
         if (Input.GetMouseButton(0))
-        { 
-
+        {
+            
+            
         }
         else
         {
@@ -70,9 +72,6 @@ public class Shoot : MonoBehaviour
                 }
             }
         }
-        
-
-
 
     }
 
@@ -88,7 +87,7 @@ public class Shoot : MonoBehaviour
         {
             angle2 = 1.7f;
         }
-        float angleStep = angle2 / (numberOfProjectiles - 1) ;
+        float angleStep = angle2 / (numberOfProjectiles - 1);
         float angle = 90f - angle2 / 2f;
 
         // Instantiate bullet holes
