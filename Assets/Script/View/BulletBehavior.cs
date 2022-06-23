@@ -34,6 +34,10 @@ public class BulletBehavior : MonoBehaviour
         {
             OnDisable();
         }
+        if (collision.gameObject.tag == "ArmureBoss")
+        {
+            OnDisable();
+        }
         
         
     }

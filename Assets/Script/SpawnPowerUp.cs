@@ -27,7 +27,6 @@ public class SpawnPowerUp : MonoBehaviour
 
     private void PowerUp()
     {
-        Debug.Log(_spawnPointPowerUp.transform.position);
         whereToSpawn = new Vector2(_spawnPointPowerUp.transform.position.x, _spawnPointPowerUp.transform.position.y);
         GameObject clientSpecial = Instantiate(_spawnPrefabPowerUp, whereToSpawn, Quaternion.identity);
         clientSpecial.transform.SetParent(_spawnPointPowerUp.transform);

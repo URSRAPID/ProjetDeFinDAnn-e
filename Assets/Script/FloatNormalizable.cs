@@ -2,7 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class FloatNormalizable : MonoBehaviour
+public class FloatNormalizable
 {
     private float _value;
     private float _max;

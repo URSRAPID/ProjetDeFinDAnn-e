@@ -12,6 +12,7 @@ TagManager:
   - BoxBalle
   - BoxFireActive
   - BouclierCharacter
+  - ArmureBoss
   layers:
   - Default
   - TransparentFX

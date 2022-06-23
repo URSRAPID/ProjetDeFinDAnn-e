@@ -16,7 +16,7 @@ public class CharacterControler1 : MonoBehaviour
 
 
     [SerializeField] private float speed = 5;
-    [SerializeField] private float speedCam = 5;
+    [SerializeField] private float speedCam;
 
     [SerializeField] private float deltaY;
     [SerializeField] private float deltaX;
@@ -219,7 +219,7 @@ public class CharacterControler1 : MonoBehaviour
         else
         {
             isCollisonRight = false;
-            speedCam = 5;
+            speedCam = 0;
         }
 
     }
