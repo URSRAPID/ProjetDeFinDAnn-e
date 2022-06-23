@@ -63,7 +63,6 @@ public class Shoot : MonoBehaviour
                 if (currentCoolDown <= 0)
                 {
 
-                    Debug.Log("Am Tras");
                     Shooter(numberOfProjectiles);
 
                     currentCoolDown = cooldownSpawnPool;

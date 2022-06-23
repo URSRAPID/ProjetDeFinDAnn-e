@@ -1,6 +1,4 @@
 using BezierSolution;
-using System.Collections;
-using System.Collections.Generic;
 using UnityEngine;
 
 public class Trajectory : MonoBehaviour
