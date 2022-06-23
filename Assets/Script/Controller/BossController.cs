@@ -9,17 +9,20 @@ public class BossController : MonoBehaviour
     private BossModel bossModel;
 
     [SerializeField] private GameObject bossPrefab;
+    
 
     // Start is called before the first frame update
     void Start()
     {
-        bossModel = new BossModel( 3, 3);
+        bossModel = new BossModel( 300, 300);
         bossModel.GetLife().Subscribe(lifeView);
     }
 
     // Update is called once per frame
     void Update()
     {
+       
+        
         if ( bossModel.GetLife().GetValue().GetValue() <= 0 )
         {
             
