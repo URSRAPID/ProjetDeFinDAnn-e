@@ -52,6 +52,15 @@ public class CharacterControler1 : MonoBehaviour
 
 
     private float minMP = 0f;
+
+
+    // ANIMATION
+
+    public Animator animator;
+
+
+
+
     void Start()
     {
 
@@ -60,9 +69,18 @@ public class CharacterControler1 : MonoBehaviour
         characterModel.GetPosition().Subscribe(positionView);
         characterModel.GetMp().Subscribe(mpView);
 
+        
+
     }
     void Update()
     {
+
+        // ANIMATION
+
+
+
+
+
 
         DetectionCollisionMur();
         Vector2 moveCam = new Vector2(speedCam * Time.deltaTime, 0);
@@ -127,13 +145,30 @@ public class CharacterControler1 : MonoBehaviour
     {
         characterModel.AddLife(-1);
 
+
+
     }
+
+    // ANIMATION TRIGGER WHEN HIT
+    public void Hit()
+    {
+        animator.SetTrigger("Hit");
+    }
+
+    public void Dead()
+    {
+        animator.SetTrigger("Dead");
+
+        // ici du coup j'ai fais la fonction qui fait que ca lancera le trigger animation de la mort, manque plus qu'à mettre " Dead(); " à la fin de la condition de mort et c good (comme à la ligne 171 pour Hit();
+    }
+
 
     private void OnCollisionEnter2D(Collision2D collision)
     {
         if (collision.gameObject.tag == "Enemy" || collision.gameObject.tag == "BalleEnemy")
         {
             OnDamage();
+            Hit();
 
         }
     }

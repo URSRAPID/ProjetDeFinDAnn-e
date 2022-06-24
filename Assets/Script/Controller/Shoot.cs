@@ -34,10 +34,25 @@ public class Shoot : MonoBehaviour
     // AUDIO SOURCE WHEN WE SHOOT
     public AudioSource shoot;
 
+    // ANIMATION 
+    Animator animator;
+    int isShootingHash;
+    
+    
+
 
 
     void Start()
     {
+        // ANIMATION 
+
+        animator = GetComponent<Animator>();
+
+        isShootingHash = Animator.StringToHash("isShooting");
+        
+
+
+
         radius = 5f;
 
 
@@ -53,16 +68,22 @@ public class Shoot : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
+        // ANIMATION
+
+        bool isShooting = animator.GetBool(isShootingHash);
+        
+
         
         if (Input.GetMouseButton(0))
         {
-            
+            animator.SetBool(isShootingHash, false);
             
         }
         else
         {
             if (_isActive == true)
             {
+                animator.SetBool(isShootingHash, true);
                 currentCoolDown -= Time.deltaTime;
                 if (currentCoolDown <= 0)
                 {
