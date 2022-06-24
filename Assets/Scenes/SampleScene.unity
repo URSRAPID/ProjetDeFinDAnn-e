@@ -5648,6 +5648,10 @@ MonoBehaviour:
   groundLayerMask:
     serializedVersion: 2
     m_Bits: 64
+  isCollisonDown: 0
+  isCollisonUp: 0
+  isCollisonLeft: 0
+  isCollisonRight: 0
   rayLength: 0.5
 --- !u!212 &832106423
 SpriteRenderer:
@@ -5708,7 +5712,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 832106421}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -4.79, y: 0, z: 0}
+  m_LocalPosition: {x: -13.15, y: 0, z: 0}
   m_LocalScale: {x: 0.3625, y: 0.3378, z: 1}
   m_Children:
   - {fileID: 1380042918}
@@ -5754,7 +5758,7 @@ MonoBehaviour:
   numberOfProjectiles: 5
   angleShoot: 9
   moveSpeed: 15
-  shoot: {fileID: 0}
+  shoot: {fileID: 832106429}
 --- !u!50 &832106427
 Rigidbody2D:
   serializedVersion: 4

@@ -43,10 +43,10 @@ public class CharacterControler1 : MonoBehaviour
     public Transform rightDown;
 
     public LayerMask groundLayerMask;
-    private bool isCollisonDown = false;
-    private bool isCollisonUp = false;
-    private bool isCollisonLeft = false;
-    private bool isCollisonRight = false;
+    public bool isCollisonDown = false;
+    public bool isCollisonUp = false;
+    public bool isCollisonLeft = false;
+    public bool isCollisonRight = false;
 
     public float rayLength = 0.5f;
 
@@ -79,6 +79,7 @@ public class CharacterControler1 : MonoBehaviour
         if (deltaPositionH < 0 && isCollisonLeft)
         {
             deltaPositionH = 0;
+            
         }
         if (deltaPositionH > 0 && isCollisonRight)
         {
@@ -216,6 +217,7 @@ public class CharacterControler1 : MonoBehaviour
         if (rightUpHit.collider != null || rightDownHit.collider != null)
         {
             isCollisonRight = true;
+            speedCam = 0;
         }
         else
         {
