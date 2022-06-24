@@ -31,6 +31,9 @@ public class Shoot : MonoBehaviour
     [SerializeField]
     float moveSpeed;
 
+    // AUDIO SOURCE WHEN WE SHOOT
+    public AudioSource shoot;
+
 
 
     void Start()
@@ -50,6 +53,7 @@ public class Shoot : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
+        
         if (Input.GetMouseButton(0))
         {
             
@@ -64,9 +68,11 @@ public class Shoot : MonoBehaviour
                 {
 
                     Shooter(numberOfProjectiles);
+                    
 
                     currentCoolDown = cooldownSpawnPool;
                     currentCoolDown++;
+                    shoot.Play();
 
                 }
             }
@@ -140,6 +146,7 @@ public class Shoot : MonoBehaviour
         if (collision.gameObject.tag == "BoxFireActive")
         {
             _isActive = true;
+            Debug.Log("OnCollisionEnter2D");
         }
     }
 
