@@ -1,0 +1,804 @@
+fileFormatVersion: 2
+guid: 4f1cd53a4dbdf1847bcbac8d3d6b403a
+TextureImporter:
+  internalIDToNameTable:
+  - first:
+      213: -6561422817448338815
+    second: DEGAT_0
+  - first:
+      213: -3599125016262438251
+    second: DEGAT_1
+  - first:
+      213: 309455562970100321
+    second: DEGAT_2
+  - first:
+      213: -4126067353458430381
+    second: DEGAT_3
+  - first:
+      213: -1210568018835923009
+    second: DEGAT_4
+  - first:
+      213: -2107531169191736086
+    second: DEGAT_5
+  - first:
+      213: -1702890971421539791
+    second: DEGAT_6
+  - first:
+      213: -7690145890911048883
+    second: DEGAT_7
+  - first:
+      213: -5970089150478887995
+    second: DEGAT_8
+  - first:
+      213: -4769649113396990061
+    second: DEGAT_9
+  - first:
+      213: -5637020985112748268
+    second: DEGAT_10
+  - first:
+      213: -6071349444969657556
+    second: DEGAT_11
+  - first:
+      213: -306066219991919455
+    second: DEGAT_12
+  - first:
+      213: 7262692333177317662
+    second: DEGAT_13
+  - first:
+      213: -5758643356401554546
+    second: DEGAT_14
+  - first:
+      213: -5933333807819752113
+    second: DEGAT_15
+  - first:
+      213: 8232748426357728531
+    second: DEGAT_16
+  - first:
+      213: 8873665068741190413
+    second: DEGAT_17
+  - first:
+      213: -6267414400513058557
+    second: DEGAT_18
+  - first:
+      213: 1269848038838072182
+    second: DEGAT_19
+  - first:
+      213: 3288705831630982305
+    second: DEGAT_20
+  - first:
+      213: 5151553989380428614
+    second: DEGAT_21
+  - first:
+      213: -51063415015566844
+    second: DEGAT_22
+  - first:
+      213: -3163885010690686178
+    second: DEGAT_23
+  - first:
+      213: -4320434890166135797
+    second: DEGAT_24
+  - first:
+      213: -7919761919614053219
+    second: DEGAT_25
+  - first:
+      213: -6302034447002330026
+    second: DEGAT_26
+  - first:
+      213: -7486926941181680401
+    second: DEGAT_27
+  - first:
+      213: -7600713537094147378
+    second: DEGAT_28
+  externalObjects: {}
+  serializedVersion: 11
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 0
+    sRGBTexture: 1
+    linearTexture: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapsPreserveCoverage: 0
+    alphaTestReferenceValue: 0.5
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: 0.25
+    normalMapFilter: 0
+  isReadable: 0
+  streamingMipmaps: 0
+  streamingMipmapsPriority: 0
+  vTOnly: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 6
+  cubemapConvolution: 0
+  seamlessCubemap: 0
+  textureFormat: 1
+  maxTextureSize: 2048
+  textureSettings:
+    serializedVersion: 2
+    filterMode: 0
+    aniso: 1
+    mipBias: 0
+    wrapU: 1
+    wrapV: 1
+    wrapW: 1
+  nPOTScale: 0
+  lightmap: 0
+  compressionQuality: 50
+  spriteMode: 2
+  spriteExtrude: 1
+  spriteMeshType: 1
+  alignment: 0
+  spritePivot: {x: 0.5, y: 0.5}
+  spritePixelsToUnits: 100
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spriteGenerateFallbackPhysicsShape: 1
+  alphaUsage: 1
+  alphaIsTransparency: 1
+  spriteTessellationDetail: -1
+  textureType: 8
+  textureShape: 1
+  singleChannelComponent: 0
+  flipbookRows: 1
+  flipbookColumns: 1
+  maxTextureSizeSet: 0
+  compressionQualitySet: 0
+  textureFormatSet: 0
+  ignorePngGamma: 0
+  applyGammaDecoding: 0
+  platformSettings:
+  - serializedVersion: 3
+    buildTarget: DefaultTexturePlatform
+    maxTextureSize: 16384
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: Standalone
+    maxTextureSize: 16384
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  spriteSheet:
+    serializedVersion: 2
+    sprites:
+    - serializedVersion: 2
+      name: DEGAT_0
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 2128
+        width: 532
+        height: 532
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 18a59d026b421f4a0800000000000000
+      internalID: -6561422817448338815
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: DEGAT_1
+      rect:
+        serializedVersion: 2
+        x: 532
+        y: 2128
+        width: 532
+        height: 532
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 592947fddd65d0ec0800000000000000
+      internalID: -3599125016262438251
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: DEGAT_2
+      rect:
+        serializedVersion: 2
+        x: 1064
+        y: 2128
+        width: 532
+        height: 532
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 162f998e1386b4400800000000000000
+      internalID: 309455562970100321
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: DEGAT_3
+      rect:
+        serializedVersion: 2
+        x: 1596
+        y: 2128
+        width: 532
+        height: 532
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 35e26c55a934db6c0800000000000000
+      internalID: -4126067353458430381
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: DEGAT_4
+      rect:
+        serializedVersion: 2
+        x: 2128
+        y: 2128
+        width: 532
+        height: 532
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: fbf16dcfcc2333fe0800000000000000
+      internalID: -1210568018835923009
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: DEGAT_5
+      rect:
+        serializedVersion: 2
+        x: 2660
+        y: 2128
+        width: 532
+        height: 532
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: aec434b519b80c2e0800000000000000
+      internalID: -2107531169191736086
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: DEGAT_6
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 1596
+        width: 532
+        height: 532
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 132033d0fad1e58e0800000000000000
+      internalID: -1702890971421539791
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: DEGAT_7
+      rect:
+        serializedVersion: 2
+        x: 532
+        y: 1596
+        width: 532
+        height: 532
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d4b215d6e0d174590800000000000000
+      internalID: -7690145890911048883
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: DEGAT_8
+      rect:
+        serializedVersion: 2
+        x: 1064
+        y: 1596
+        width: 532
+        height: 532
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 5c3da4c6c8bf52da0800000000000000
+      internalID: -5970089150478887995
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: DEGAT_9
+      rect:
+        serializedVersion: 2
+        x: 1596
+        y: 1596
+        width: 532
+        height: 532
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 39f27bce66dcecdb0800000000000000
+      internalID: -4769649113396990061
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: DEGAT_10
+      rect:
+        serializedVersion: 2
+        x: 2128
+        y: 1596
+        width: 532
+        height: 532
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 41f9eeeb74745c1b0800000000000000
+      internalID: -5637020985112748268
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: DEGAT_11
+      rect:
+        serializedVersion: 2
+        x: 2660
+        y: 1596
+        width: 532
+        height: 532
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c2b8151e8db3ebba0800000000000000
+      internalID: -6071349444969657556
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: DEGAT_12
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 1064
+        width: 532
+        height: 532
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 1a492aff462a0cbf0800000000000000
+      internalID: -306066219991919455
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: DEGAT_13
+      rect:
+        serializedVersion: 2
+        x: 532
+        y: 1064
+        width: 532
+        height: 532
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e19acf792344ac460800000000000000
+      internalID: 7262692333177317662
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: DEGAT_14
+      rect:
+        serializedVersion: 2
+        x: 1064
+        y: 1064
+        width: 532
+        height: 532
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e8ba581c0603510b0800000000000000
+      internalID: -5758643356401554546
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: DEGAT_15
+      rect:
+        serializedVersion: 2
+        x: 1596
+        y: 1064
+        width: 532
+        height: 532
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f4d7613865098ada0800000000000000
+      internalID: -5933333807819752113
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: DEGAT_16
+      rect:
+        serializedVersion: 2
+        x: 2128
+        y: 1064
+        width: 532
+        height: 532
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 31565362319904270800000000000000
+      internalID: 8232748426357728531
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: DEGAT_17
+      rect:
+        serializedVersion: 2
+        x: 2660
+        y: 1064
+        width: 532
+        height: 532
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d036c168d57952b70800000000000000
+      internalID: 8873665068741190413
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: DEGAT_18
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 532
+        width: 532
+        height: 532
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 30950451fcba509a0800000000000000
+      internalID: -6267414400513058557
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: DEGAT_19
+      rect:
+        serializedVersion: 2
+        x: 532
+        y: 532
+        width: 532
+        height: 532
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 6737ba930186f9110800000000000000
+      internalID: 1269848038838072182
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: DEGAT_20
+      rect:
+        serializedVersion: 2
+        x: 1064
+        y: 532
+        width: 532
+        height: 532
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 1acce119784d3ad20800000000000000
+      internalID: 3288705831630982305
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: DEGAT_21
+      rect:
+        serializedVersion: 2
+        x: 1596
+        y: 532
+        width: 532
+        height: 532
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 643544a2f0ffd7740800000000000000
+      internalID: 5151553989380428614
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: DEGAT_22
+      rect:
+        serializedVersion: 2
+        x: 2128
+        y: 532
+        width: 532
+        height: 532
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 4029af638169a4ff0800000000000000
+      internalID: -51063415015566844
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: DEGAT_23
+      rect:
+        serializedVersion: 2
+        x: 2660
+        y: 532
+        width: 532
+        height: 532
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e134993885f9714d0800000000000000
+      internalID: -3163885010690686178
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: DEGAT_24
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 0
+        width: 532
+        height: 532
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b049178ab5bba04c0800000000000000
+      internalID: -4320434890166135797
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: DEGAT_25
+      rect:
+        serializedVersion: 2
+        x: 532
+        y: 0
+        width: 532
+        height: 532
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d941dbbae7a571290800000000000000
+      internalID: -7919761919614053219
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: DEGAT_26
+      rect:
+        serializedVersion: 2
+        x: 1064
+        y: 0
+        width: 532
+        height: 532
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 65c96206f0daa88a0800000000000000
+      internalID: -6302034447002330026
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: DEGAT_27
+      rect:
+        serializedVersion: 2
+        x: 1596
+        y: 0
+        width: 532
+        height: 532
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: fe4609b4d97191890800000000000000
+      internalID: -7486926941181680401
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: DEGAT_28
+      rect:
+        serializedVersion: 2
+        x: 2128
+        y: 0
+        width: 532
+        height: 532
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: ec2200eee47d48690800000000000000
+      internalID: -7600713537094147378
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    outline: []
+    physicsShape: []
+    bones: []
+    spriteID: 5e97eb03825dee720800000000000000
+    internalID: 0
+    vertices: []
+    indices: 
+    edges: []
+    weights: []
+    secondaryTextures: []
+  spritePackingTag: 
+  pSDRemoveMatte: 0
+  pSDShowRemoveMatteOption: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 

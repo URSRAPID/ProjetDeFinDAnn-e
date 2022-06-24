@@ -1,0 +1,1188 @@
+fileFormatVersion: 2
+guid: cd719f8eff97f444895cce669038c519
+TextureImporter:
+  internalIDToNameTable:
+  - first:
+      213: 6600873071128850476
+    second: Mort_0
+  - first:
+      213: 7997167939867623938
+    second: Mort_1
+  - first:
+      213: -4350205761586941916
+    second: Mort_2
+  - first:
+      213: 3650936705748941849
+    second: Mort_3
+  - first:
+      213: 8449501426211318961
+    second: Mort_4
+  - first:
+      213: 3864198319610968083
+    second: Mort_5
+  - first:
+      213: 6071114488433144042
+    second: Mort_6
+  - first:
+      213: -7105383210724327060
+    second: Mort_7
+  - first:
+      213: 2154048276801365091
+    second: Mort_8
+  - first:
+      213: -1104264942778877308
+    second: Mort_9
+  - first:
+      213: 608222963519068055
+    second: Mort_10
+  - first:
+      213: -5827630290953140230
+    second: Mort_11
+  - first:
+      213: -5334515895592568570
+    second: Mort_12
+  - first:
+      213: 5461920554630551610
+    second: Mort_13
+  - first:
+      213: 3418498129562344950
+    second: Mort_14
+  - first:
+      213: 874726576742562835
+    second: Mort_15
+  - first:
+      213: -6129018380466869181
+    second: Mort_16
+  - first:
+      213: -4119779214808388605
+    second: Mort_17
+  - first:
+      213: -4978681620014417383
+    second: Mort_18
+  - first:
+      213: -5458856333689316544
+    second: Mort_19
+  - first:
+      213: -6177169051389559760
+    second: Mort_20
+  - first:
+      213: 4580782751238492984
+    second: Mort_21
+  - first:
+      213: 2521360933441353791
+    second: Mort_22
+  - first:
+      213: 3156323419078508274
+    second: Mort_23
+  - first:
+      213: -2275197201639247136
+    second: Mort_24
+  - first:
+      213: -6841427696406271114
+    second: Mort_25
+  - first:
+      213: 1454187715632297343
+    second: Mort_26
+  - first:
+      213: -4873568723916138120
+    second: Mort_27
+  - first:
+      213: -566970292479035621
+    second: Mort_28
+  - first:
+      213: -5849308264203346299
+    second: Mort_29
+  - first:
+      213: -2719234124737604123
+    second: Mort_30
+  - first:
+      213: -2318856143344982338
+    second: Mort_31
+  - first:
+      213: -7518122729378258000
+    second: Mort_32
+  - first:
+      213: -8126290840840835311
+    second: Mort_33
+  - first:
+      213: -2265990403408015239
+    second: Mort_34
+  - first:
+      213: 5182705982959953096
+    second: Mort_35
+  - first:
+      213: -5845803384411550389
+    second: Mort_36
+  - first:
+      213: 3609568479125934568
+    second: Mort_37
+  - first:
+      213: 2860735965248650770
+    second: Mort_38
+  - first:
+      213: 4943914297263417630
+    second: Mort_39
+  - first:
+      213: 4419550925463278087
+    second: Mort_40
+  - first:
+      213: -4237519866336144181
+    second: Mort_41
+  - first:
+      213: -114860864675307971
+    second: Mort_42
+  - first:
+      213: 6962844760765399120
+    second: Mort_43
+  - first:
+      213: 5112630678615430678
+    second: Mort_44
+  externalObjects: {}
+  serializedVersion: 11
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 0
+    sRGBTexture: 1
+    linearTexture: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapsPreserveCoverage: 0
+    alphaTestReferenceValue: 0.5
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: 0.25
+    normalMapFilter: 0
+  isReadable: 0
+  streamingMipmaps: 0
+  streamingMipmapsPriority: 0
+  vTOnly: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 6
+  cubemapConvolution: 0
+  seamlessCubemap: 0
+  textureFormat: 1
+  maxTextureSize: 2048
+  textureSettings:
+    serializedVersion: 2
+    filterMode: 0
+    aniso: 1
+    mipBias: 0
+    wrapU: 1
+    wrapV: 1
+    wrapW: 1
+  nPOTScale: 0
+  lightmap: 0
+  compressionQuality: 50
+  spriteMode: 2
+  spriteExtrude: 1
+  spriteMeshType: 1
+  alignment: 0
+  spritePivot: {x: 0.5, y: 0.5}
+  spritePixelsToUnits: 100
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spriteGenerateFallbackPhysicsShape: 1
+  alphaUsage: 1
+  alphaIsTransparency: 1
+  spriteTessellationDetail: -1
+  textureType: 8
+  textureShape: 1
+  singleChannelComponent: 0
+  flipbookRows: 1
+  flipbookColumns: 1
+  maxTextureSizeSet: 0
+  compressionQualitySet: 0
+  textureFormatSet: 0
+  ignorePngGamma: 0
+  applyGammaDecoding: 0
+  platformSettings:
+  - serializedVersion: 3
+    buildTarget: DefaultTexturePlatform
+    maxTextureSize: 16384
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: Standalone
+    maxTextureSize: 16384
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  spriteSheet:
+    serializedVersion: 2
+    sprites:
+    - serializedVersion: 2
+      name: Mort_0
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 3192
+        width: 532
+        height: 532
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c20b314d5130b9b50800000000000000
+      internalID: 6600873071128850476
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Mort_1
+      rect:
+        serializedVersion: 2
+        x: 532
+        y: 3192
+        width: 532
+        height: 532
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 202c3f8ded5abfe60800000000000000
+      internalID: 7997167939867623938
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Mort_2
+      rect:
+        serializedVersion: 2
+        x: 1064
+        y: 3192
+        width: 532
+        height: 532
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 420b0c088e6f0a3c0800000000000000
+      internalID: -4350205761586941916
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Mort_3
+      rect:
+        serializedVersion: 2
+        x: 1596
+        y: 3192
+        width: 532
+        height: 532
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 91cb993279bbaa230800000000000000
+      internalID: 3650936705748941849
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Mort_4
+      rect:
+        serializedVersion: 2
+        x: 2128
+        y: 3192
+        width: 532
+        height: 532
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 1bc6b7e97c8a24570800000000000000
+      internalID: 8449501426211318961
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Mort_5
+      rect:
+        serializedVersion: 2
+        x: 2660
+        y: 3192
+        width: 532
+        height: 532
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 318b216f5e360a530800000000000000
+      internalID: 3864198319610968083
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Mort_6
+      rect:
+        serializedVersion: 2
+        x: 3192
+        y: 3192
+        width: 532
+        height: 532
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: ae0f8c9067ee04450800000000000000
+      internalID: 6071114488433144042
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Mort_7
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 2660
+        width: 532
+        height: 532
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c6180c3ad9b946d90800000000000000
+      internalID: -7105383210724327060
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Mort_8
+      rect:
+        serializedVersion: 2
+        x: 532
+        y: 2660
+        width: 532
+        height: 532
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 364a9cfbe77b4ed10800000000000000
+      internalID: 2154048276801365091
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Mort_9
+      rect:
+        serializedVersion: 2
+        x: 1064
+        y: 2660
+        width: 532
+        height: 532
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 48a7fbb92ecdca0f0800000000000000
+      internalID: -1104264942778877308
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Mort_10
+      rect:
+        serializedVersion: 2
+        x: 1596
+        y: 2660
+        width: 532
+        height: 532
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 7971ac41097d07800800000000000000
+      internalID: 608222963519068055
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Mort_11
+      rect:
+        serializedVersion: 2
+        x: 2128
+        y: 2660
+        width: 532
+        height: 532
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: af78e616029102fa0800000000000000
+      internalID: -5827630290953140230
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Mort_12
+      rect:
+        serializedVersion: 2
+        x: 2660
+        y: 2660
+        width: 532
+        height: 532
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 609b7827e0ef7f5b0800000000000000
+      internalID: -5334515895592568570
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Mort_13
+      rect:
+        serializedVersion: 2
+        x: 3192
+        y: 2660
+        width: 532
+        height: 532
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a3898225ec3accb40800000000000000
+      internalID: 5461920554630551610
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Mort_14
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 2128
+        width: 532
+        height: 532
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 6fd96e5dfe1f07f20800000000000000
+      internalID: 3418498129562344950
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Mort_15
+      rect:
+        serializedVersion: 2
+        x: 532
+        y: 2128
+        width: 532
+        height: 532
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 31c7552ef27a32c00800000000000000
+      internalID: 874726576742562835
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Mort_16
+      rect:
+        serializedVersion: 2
+        x: 1064
+        y: 2128
+        width: 532
+        height: 532
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 34cae62814a51faa0800000000000000
+      internalID: -6129018380466869181
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Mort_17
+      rect:
+        serializedVersion: 2
+        x: 1596
+        y: 2128
+        width: 532
+        height: 532
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 30cee44b1aa93d6c0800000000000000
+      internalID: -4119779214808388605
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Mort_18
+      rect:
+        serializedVersion: 2
+        x: 2128
+        y: 2128
+        width: 532
+        height: 532
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 91a364dd17b28eab0800000000000000
+      internalID: -4978681620014417383
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Mort_19
+      rect:
+        serializedVersion: 2
+        x: 2660
+        y: 2128
+        width: 532
+        height: 532
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 04b9e86361f3e34b0800000000000000
+      internalID: -5458856333689316544
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Mort_20
+      rect:
+        serializedVersion: 2
+        x: 3192
+        y: 2128
+        width: 532
+        height: 532
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 03c736ec979464aa0800000000000000
+      internalID: -6177169051389559760
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Mort_21
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 1596
+        width: 532
+        height: 532
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 8339ec864a5329f30800000000000000
+      internalID: 4580782751238492984
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Mort_22
+      rect:
+        serializedVersion: 2
+        x: 532
+        y: 1596
+        width: 532
+        height: 532
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f38b154096cadf220800000000000000
+      internalID: 2521360933441353791
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Mort_23
+      rect:
+        serializedVersion: 2
+        x: 1064
+        y: 1596
+        width: 532
+        height: 532
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 2febb6e3d638dcb20800000000000000
+      internalID: 3156323419078508274
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Mort_24
+      rect:
+        serializedVersion: 2
+        x: 1596
+        y: 1596
+        width: 532
+        height: 532
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 0e2745a1330ec60e0800000000000000
+      internalID: -2275197201639247136
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Mort_25
+      rect:
+        serializedVersion: 2
+        x: 2128
+        y: 1596
+        width: 532
+        height: 532
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 67b6f2fe1cd5e01a0800000000000000
+      internalID: -6841427696406271114
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Mort_26
+      rect:
+        serializedVersion: 2
+        x: 2660
+        y: 1596
+        width: 532
+        height: 532
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f75fff2d5005e2410800000000000000
+      internalID: 1454187715632297343
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Mort_27
+      rect:
+        serializedVersion: 2
+        x: 3192
+        y: 1596
+        width: 532
+        height: 532
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 879568e111b9d5cb0800000000000000
+      internalID: -4873568723916138120
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Mort_28
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 1064
+        width: 532
+        height: 532
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b17769ed587b128f0800000000000000
+      internalID: -566970292479035621
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Mort_29
+      rect:
+        serializedVersion: 2
+        x: 532
+        y: 1064
+        width: 532
+        height: 532
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 58e176aef1513dea0800000000000000
+      internalID: -5849308264203346299
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Mort_30
+      rect:
+        serializedVersion: 2
+        x: 1064
+        y: 1064
+        width: 532
+        height: 532
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 5e515ed78f6534ad0800000000000000
+      internalID: -2719234124737604123
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Mort_31
+      rect:
+        serializedVersion: 2
+        x: 1596
+        y: 1064
+        width: 532
+        height: 532
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: eb6a0ba9f94c1dfd0800000000000000
+      internalID: -2318856143344982338
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Mort_32
+      rect:
+        serializedVersion: 2
+        x: 2128
+        y: 1064
+        width: 532
+        height: 532
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 0b36e99d5334aa790800000000000000
+      internalID: -7518122729378258000
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Mort_33
+      rect:
+        serializedVersion: 2
+        x: 2660
+        y: 1064
+        width: 532
+        height: 532
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 11feb22098d993f80800000000000000
+      internalID: -8126290840840835311
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Mort_34
+      rect:
+        serializedVersion: 2
+        x: 3192
+        y: 1064
+        width: 532
+        height: 532
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 970db6cdbb59d80e0800000000000000
+      internalID: -2265990403408015239
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Mort_35
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 532
+        width: 532
+        height: 532
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 8c4ae91e1abace740800000000000000
+      internalID: 5182705982959953096
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Mort_36
+      rect:
+        serializedVersion: 2
+        x: 532
+        y: 532
+        width: 532
+        height: 532
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b4d8f555bc88fdea0800000000000000
+      internalID: -5845803384411550389
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Mort_37
+      rect:
+        serializedVersion: 2
+        x: 1064
+        y: 532
+        width: 532
+        height: 532
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 8e19fbe4863c71230800000000000000
+      internalID: 3609568479125934568
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Mort_38
+      rect:
+        serializedVersion: 2
+        x: 1596
+        y: 532
+        width: 532
+        height: 532
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 21e74dc143063b720800000000000000
+      internalID: 2860735965248650770
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Mort_39
+      rect:
+        serializedVersion: 2
+        x: 2128
+        y: 532
+        width: 532
+        height: 532
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e196c500cdf4c9440800000000000000
+      internalID: 4943914297263417630
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Mort_40
+      rect:
+        serializedVersion: 2
+        x: 2660
+        y: 532
+        width: 532
+        height: 532
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 702dcf2a626655d30800000000000000
+      internalID: 4419550925463278087
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Mort_41
+      rect:
+        serializedVersion: 2
+        x: 3192
+        y: 532
+        width: 532
+        height: 532
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: bc49f56022e4135c0800000000000000
+      internalID: -4237519866336144181
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Mort_42
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 0
+        width: 532
+        height: 532
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d3e1f62f6aee76ef0800000000000000
+      internalID: -114860864675307971
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Mort_43
+      rect:
+        serializedVersion: 2
+        x: 532
+        y: 0
+        width: 532
+        height: 532
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 0508c9f4b6ef0a060800000000000000
+      internalID: 6962844760765399120
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Mort_44
+      rect:
+        serializedVersion: 2
+        x: 1064
+        y: 0
+        width: 532
+        height: 532
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 61613aaa386b3f640800000000000000
+      internalID: 5112630678615430678
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    outline: []
+    physicsShape: []
+    bones: []
+    spriteID: 5e97eb03825dee720800000000000000
+    internalID: 0
+    vertices: []
+    indices: 
+    edges: []
+    weights: []
+    secondaryTextures: []
+  spritePackingTag: 
+  pSDRemoveMatte: 0
+  pSDShowRemoveMatteOption: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
