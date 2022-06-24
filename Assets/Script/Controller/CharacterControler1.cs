@@ -16,7 +16,7 @@ public class CharacterControler1 : MonoBehaviour
 
 
     [SerializeField] private float speed = 5;
-    [SerializeField] private float speedCam;
+    [SerializeField] private float speedCam = 5;
 
     [SerializeField] private float deltaY;
     [SerializeField] private float deltaX;
@@ -85,6 +85,7 @@ public class CharacterControler1 : MonoBehaviour
             deltaPositionH = 0;
             speedCam = 0;
         }
+        
         Vector2 deltaPosition = new Vector2(deltaPositionH, deltaPositionV);
 
 
@@ -111,12 +112,12 @@ public class CharacterControler1 : MonoBehaviour
             deltaPosition.x = 0F;
         }
 
+
+
+        
+        characterModel.AddPosition(moveCam + deltaPosition);
         
 
-
-        characterModel.AddPosition(moveCam + deltaPosition);
-       
-       
         bouclierView.transform.position = new Vector2(characterModel.GetPosition().GetValue().x + deltaPositionBouclier, characterModel.GetPosition().GetValue().y);
 
     }
