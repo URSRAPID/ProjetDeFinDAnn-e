@@ -4660,6 +4660,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   lifeView: {fileID: 198479353}
   bossPrefab: {fileID: 2082497216}
+  speedAngles: 15
+  anglesMax: 180
 --- !u!1 &200228232
 GameObject:
   m_ObjectHideFlags: 0
@@ -7876,6 +7878,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   lifeView: {fileID: 342267425}
   bossPrefab: {fileID: 2082497216}
+  speedAngles: 15
+  anglesMax: 0
 --- !u!1001 &345507892
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -11720,7 +11724,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 5ac9fd61438af4e49acc25e6f5927686, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  speed: 5
+  speed: 0
 --- !u!20 &519420031
 Camera:
   m_ObjectHideFlags: 0
@@ -13072,6 +13076,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   lifeView: {fileID: 567004970}
   bossPrefab: {fileID: 2082497216}
+  speedAngles: 15
+  anglesMax: 90
 --- !u!61 &567004973
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -18650,7 +18656,7 @@ MonoBehaviour:
   cam: {fileID: 519420032}
   bouclierView: {fileID: 887005774}
   speed: 5.5
-  speedCam: 5
+  speedCam: 0
   deltaY: 4.37
   deltaX: 8.25
   deltaminY: -4.35
@@ -29153,6 +29159,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   lifeView: {fileID: 1330625309}
   bossPrefab: {fileID: 2082497216}
+  speedAngles: 15
+  anglesMax: 270
 --- !u!1001 &1336946510
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -33294,7 +33302,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!4 &1575128984
 Transform:
   m_ObjectHideFlags: 0
@@ -35455,7 +35463,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!4 &1705375949
 Transform:
   m_ObjectHideFlags: 0
@@ -44294,7 +44302,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!212 &2082497217
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -44354,7 +44362,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 2082497216}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 4.49, y: -0.03, z: 0}
+  m_LocalPosition: {x: 1.81, y: -0.03, z: 0}
   m_LocalScale: {x: 9.781796, y: 9.781796, z: 3}
   m_Children:
   - {fileID: 342267421}

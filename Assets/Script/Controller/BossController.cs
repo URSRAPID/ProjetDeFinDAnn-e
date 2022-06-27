@@ -1,5 +1,3 @@
-using System.Collections;
-using System.Collections.Generic;
 using UnityEngine;
 
 public class BossController : MonoBehaviour
@@ -9,29 +7,53 @@ public class BossController : MonoBehaviour
     private BossModel bossModel;
 
     [SerializeField] private GameObject bossPrefab;
-    
+
+    private float anglesMin = 0;
+    public  float speedAngles = 10;
+    public float anglesMax;
+    private bool isDead = false;
 
     // Start is called before the first frame update
     void Start()
     {
-        bossModel = new BossModel( 300, 300);
+        bossModel = new BossModel(300, 300);
         bossModel.GetLife().Subscribe(lifeView);
     }
 
     // Update is called once per frame
     void Update()
     {
-       
         
-        if ( bossModel.GetLife().GetValue().GetValue() <= 0 )
+
+        if (bossModel.GetLife().GetValue().GetValue() <= 0)
         {
-            
-            bossPrefab.transform.eulerAngles = new Vector3(bossPrefab.transform.eulerAngles.x, bossPrefab.transform.eulerAngles.y, bossPrefab.transform.eulerAngles.z + 90);
-            Destroy(gameObject);
-            Debug.Log(bossPrefab.transform.eulerAngles.z);
+            this.gameObject.GetComponent<Renderer>().enabled = false;
+            this.gameObject.GetComponent<BoxCollider2D>().enabled = false;
+            foreach (Transform go in transform)
+            {
+                go.gameObject.SetActive(false);
+            }
+            isDead = true;
+            Debug.Log(isDead);
+            if (isDead == true)
+            {
+                Debug.Log("Oui");
+                if (bossPrefab.transform.eulerAngles.z < anglesMax)
+                {
+                    Debug.Log(anglesMin);
+                    anglesMin = speedAngles * Time.deltaTime;
+                    bossPrefab.transform.eulerAngles = new Vector3(bossPrefab.transform.eulerAngles.x, bossPrefab.transform.eulerAngles.y, bossPrefab.transform.eulerAngles.z + anglesMin);
+                }
+                else
+                {
+                    bossPrefab.transform.eulerAngles = new Vector3(bossPrefab.transform.eulerAngles.x, bossPrefab.transform.eulerAngles.y, anglesMax);
+                    isDead = false;
+                    Destroy(gameObject);
+                }
+            }
         }
-       
     }
+
 
     public void OnDamage()
     {

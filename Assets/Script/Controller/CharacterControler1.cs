@@ -57,9 +57,7 @@ public class CharacterControler1 : MonoBehaviour
     // ANIMATION
 
     public Animator animator;
-
-
-
+    private bool isDead;
 
     void Start()
     {
@@ -154,14 +152,17 @@ public class CharacterControler1 : MonoBehaviour
     // ANIMATION TRIGGER WHEN HIT
     public void Hit()
     {
-        animator.SetTrigger("Hit");
+        if (!isDead)
+        {
+            animator.SetTrigger("Hit");
+        }
     }
 
     public void Dead()
     {
-        if (characterModel.GetLife().GetValue().GetValue() <= 0)
+        if (characterModel.GetLife().GetValue().GetValue() <= 0 && !isDead)
         {
-
+            isDead = true;
             animator.SetTrigger("Dead");
            
         }
@@ -266,7 +267,7 @@ public class CharacterControler1 : MonoBehaviour
         else
         {
             isCollisonRight = false;
-            speedCam = 5;
+            speedCam = 0.0F ;
         }
 
     }
