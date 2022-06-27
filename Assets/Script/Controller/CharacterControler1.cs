@@ -111,17 +111,7 @@ public class CharacterControler1 : MonoBehaviour
             speedCam = 0;
         }
 
-        if (characterModel.GetLife().GetValue().GetValue() <= 0 && !isDead)
-        {
-            isDead = true;
-            deltaPositionH = 0;
-            deltaPositionV = 0;
-            animator.SetTrigger("Dead");
-            StartCoroutine(LoadDelayed());
-
-
-
-        }
+        
 
         Vector2 deltaPosition = new Vector2(deltaPositionH, deltaPositionV);
 
@@ -161,7 +151,7 @@ public class CharacterControler1 : MonoBehaviour
         bouclierView.transform.position = new Vector2(characterModel.GetPosition().GetValue().x + deltaPositionBouclier, characterModel.GetPosition().GetValue().y);
 
 
-        //Dead();
+        Dead();
         
     }
 
@@ -188,7 +178,7 @@ public class CharacterControler1 : MonoBehaviour
         if (characterModel.GetLife().GetValue().GetValue() <= 0 && !isDead)
         {
             isDead = true;
-            // enlever controlleur pour arrêter de bouger
+            
             animator.SetTrigger("Dead");
             StartCoroutine(LoadDelayed());
             
