@@ -25,6 +25,9 @@ public class BossShoot : MonoBehaviour
     [SerializeField]
     float moveSpeed;
 
+    //AUDIO SOURCE TIR
+    public AudioSource shoot_boss;
+
 
 
     void Start()
@@ -50,6 +53,7 @@ public class BossShoot : MonoBehaviour
 
             currentCoolDown = cooldownSpawnPool;
             currentCoolDown++;
+            shoot_boss.Play();
 
         }
 

@@ -13,6 +13,8 @@ public class BossController : MonoBehaviour
     public float anglesMax;
     private bool isDead = false;
 
+    
+
     // Start is called before the first frame update
     void Start()
     {

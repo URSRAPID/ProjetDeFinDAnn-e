@@ -66,6 +66,8 @@ public class CharacterControler1 : MonoBehaviour
 
     public GameObject gameOver;
     bool loadedOnce = false;
+    public AudioSource stopLevelMusic;
+    public AudioSource gameoverMusic;
 
     void Start()
     {
@@ -75,7 +77,6 @@ public class CharacterControler1 : MonoBehaviour
         characterModel.GetPosition().Subscribe(positionView);
         characterModel.GetMp().Subscribe(mpView);
 
-        
 
     }
     void Update()
@@ -192,7 +193,9 @@ public class CharacterControler1 : MonoBehaviour
     {
         yield return new WaitForSeconds(tempsEnSecondes);
         Time.timeScale = 0;
+        stopLevelMusic.Stop();
         gameOver.SetActive(true);
+        gameoverMusic.Play();
     }
 
 
