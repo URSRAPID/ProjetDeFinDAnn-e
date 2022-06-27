@@ -21,7 +21,7 @@ AnimatorState:
   m_MirrorParameterActive: 0
   m_CycleOffsetParameterActive: 0
   m_TimeParameterActive: 0
-  m_Motion: {fileID: 7400000, guid: 207865bb2c1b7b24b9181aa0228ab9e7, type: 2}
+  m_Motion: {fileID: 7400000, guid: 87d0036f3112a29488538279c7e56191, type: 2}
   m_Tag: 
   m_SpeedParameter: 
   m_MirrorParameter: 
@@ -48,7 +48,7 @@ AnimatorState:
   m_MirrorParameterActive: 0
   m_CycleOffsetParameterActive: 0
   m_TimeParameterActive: 0
-  m_Motion: {fileID: 7400000, guid: ce7f08fd6fc9e7f43917ecbd84504349, type: 2}
+  m_Motion: {fileID: 7400000, guid: 50f0595b3a3615840bc5f461da7b4c79, type: 2}
   m_Tag: 
   m_SpeedParameter: 
   m_MirrorParameter: 
@@ -244,7 +244,7 @@ AnimatorState:
   m_MirrorParameterActive: 0
   m_CycleOffsetParameterActive: 0
   m_TimeParameterActive: 0
-  m_Motion: {fileID: 7400000, guid: 525e06ebb89c64e48be86f47e0ce5f4e, type: 2}
+  m_Motion: {fileID: 7400000, guid: 4b57fcc58967cf1459150b90492b0596, type: 2}
   m_Tag: 
   m_SpeedParameter: 
   m_MirrorParameter: 
@@ -258,7 +258,7 @@ AnimatorState:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_Name: TIRE
-  m_Speed: 1
+  m_Speed: 3
   m_CycleOffset: 0
   m_Transitions:
   - {fileID: -2223960379681606463}
@@ -271,7 +271,7 @@ AnimatorState:
   m_MirrorParameterActive: 0
   m_CycleOffsetParameterActive: 0
   m_TimeParameterActive: 0
-  m_Motion: {fileID: 7400000, guid: 4fe89da4ad28bdf47a0f9e840caa14f2, type: 2}
+  m_Motion: {fileID: 7400000, guid: 2249f1329cdf9c14c93c2dd549a0692f, type: 2}
   m_Tag: 
   m_SpeedParameter: 
   m_MirrorParameter: 

@@ -20,4 +20,7 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Scenes/LevelSelection.unity
     guid: 13644f4f80756f04395bc4e2ef1ba0c7
+  - enabled: 1
+    path: Assets/Scenes/Dialogue.unity
+    guid: 02254ba7d29d057449af8a1647816171
   m_configObjects: {}

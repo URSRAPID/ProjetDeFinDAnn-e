@@ -43,17 +43,21 @@ public class MenuController : MonoBehaviour
     {
         string currentSceneName = SceneManager.GetActiveScene().name;
         UnityEngine.SceneManagement.SceneManager.LoadScene(currentSceneName);
+        Time.timeScale = 1;
     }
 
     public void LevelSelection()
     {
         UnityEngine.SceneManagement.SceneManager.LoadScene("LevelSelection");
+        Time.timeScale = 1;
     }
 
     public void Menu()
     {
         UnityEngine.SceneManagement.SceneManager.LoadScene("Menu");
+        Time.timeScale = 1;
     }
+
 
 
 }
