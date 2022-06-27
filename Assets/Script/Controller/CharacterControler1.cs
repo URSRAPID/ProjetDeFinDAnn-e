@@ -1,4 +1,6 @@
 using UnityEngine;
+using System.Collections;
+using System.Collections.Generic;
 
 
 public class CharacterControler1 : MonoBehaviour
@@ -63,6 +65,7 @@ public class CharacterControler1 : MonoBehaviour
     // Game Over Panel
 
     public GameObject gameOver;
+    bool loadedOnce = false;
 
     void Start()
     {
@@ -107,7 +110,19 @@ public class CharacterControler1 : MonoBehaviour
             deltaPositionH = 0;
             speedCam = 0;
         }
-        
+
+        if (characterModel.GetLife().GetValue().GetValue() <= 0 && !isDead)
+        {
+            isDead = true;
+            deltaPositionH = 0;
+            deltaPositionV = 0;
+            animator.SetTrigger("Dead");
+            StartCoroutine(LoadDelayed());
+
+
+
+        }
+
         Vector2 deltaPosition = new Vector2(deltaPositionH, deltaPositionV);
 
 
@@ -136,14 +151,18 @@ public class CharacterControler1 : MonoBehaviour
 
 
 
+
+
         
+
         characterModel.AddPosition(moveCam + deltaPosition);
         
 
         bouclierView.transform.position = new Vector2(characterModel.GetPosition().GetValue().x + deltaPositionBouclier, characterModel.GetPosition().GetValue().y);
 
 
-        Dead();
+        //Dead();
+        
     }
 
     public void OnDamage()
@@ -163,17 +182,27 @@ public class CharacterControler1 : MonoBehaviour
         }
     }
 
+
     public void Dead()
     {
         if (characterModel.GetLife().GetValue().GetValue() <= 0 && !isDead)
         {
             isDead = true;
+            // enlever controlleur pour arrêter de bouger
             animator.SetTrigger("Dead");
-            Time.timeScale = 0;
-            gameOver.SetActive(true);
+            StartCoroutine(LoadDelayed());
+            
+            
 
         }
         // ici du coup j'ai fais la fonction qui fait que ca lancera le trigger animation de la mort, manque plus qu'à mettre " Dead(); " à la fin de la condition de mort et c good (comme à la ligne 171 pour Hit();
+    }
+
+    IEnumerator LoadDelayed(float tempsEnSecondes = 1.5f)
+    {
+        yield return new WaitForSeconds(tempsEnSecondes);
+        Time.timeScale = 0;
+        gameOver.SetActive(true);
     }
 
 
