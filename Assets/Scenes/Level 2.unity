@@ -870,6 +870,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   lifeView: {fileID: 164203286}
   bossPrefab: {fileID: 1531353560}
+  speedAngles: 10
+  anglesMax: 0
 --- !u!212 &164203288
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -2273,28 +2275,13 @@ GameObject:
   m_Component:
   - component: {fileID: 570678068}
   - component: {fileID: 570678067}
-  - component: {fileID: 570678066}
   m_Layer: 0
   m_Name: Wave1ReplayTrigger
-  m_TagString: Untagged
+  m_TagString: BoxIsActiveVague
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
---- !u!114 &570678066
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 570678065}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 05014c72856b3d749af3bdbc565c1ad3, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  wave1: {fileID: 570678067}
-  truc: {fileID: 1005451528}
 --- !u!61 &570678067
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -2329,11 +2316,12 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 570678065}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 92.1, y: -0.1, z: -813.6376}
+  m_LocalPosition: {x: 91.2, y: -0.1, z: -813.6376}
   m_LocalScale: {x: 1, y: 1, z: 1}
-  m_Children: []
+  m_Children:
+  - {fileID: 1005451529}
   m_Father: {fileID: 0}
-  m_RootOrder: 16
+  m_RootOrder: 10
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &574309458
 GameObject:
@@ -2629,6 +2617,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   lifeView: {fileID: 586914677}
   bossPrefab: {fileID: 1531353560}
+  speedAngles: 10
+  anglesMax: 0
 --- !u!212 &586914679
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -4621,6 +4611,11 @@ GameObject:
   m_CorrespondingSourceObject: {fileID: 4985297385557272632, guid: c11f4c6e33f8941429254e4b9bc3b926, type: 3}
   m_PrefabInstance: {fileID: 1257547147}
   m_PrefabAsset: {fileID: 0}
+--- !u!4 &1005451529 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: 4985297385557272633, guid: c11f4c6e33f8941429254e4b9bc3b926, type: 3}
+  m_PrefabInstance: {fileID: 1257547147}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1001 &1025537209
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -6127,7 +6122,7 @@ PrefabInstance:
   m_ObjectHideFlags: 0
   serializedVersion: 2
   m_Modification:
-    m_TransformParent: {fileID: 0}
+    m_TransformParent: {fileID: 570678068}
     m_Modifications:
     - target: {fileID: 4985297385557272632, guid: c11f4c6e33f8941429254e4b9bc3b926, type: 3}
       propertyPath: m_Name
@@ -6139,19 +6134,19 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 4985297385557272633, guid: c11f4c6e33f8941429254e4b9bc3b926, type: 3}
       propertyPath: m_RootOrder
-      value: 10
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 4985297385557272633, guid: c11f4c6e33f8941429254e4b9bc3b926, type: 3}
       propertyPath: m_LocalPosition.x
-      value: 57.379997
+      value: -33.82
       objectReference: {fileID: 0}
     - target: {fileID: 4985297385557272633, guid: c11f4c6e33f8941429254e4b9bc3b926, type: 3}
       propertyPath: m_LocalPosition.y
-      value: -0.715523
+      value: -0.615523
       objectReference: {fileID: 0}
     - target: {fileID: 4985297385557272633, guid: c11f4c6e33f8941429254e4b9bc3b926, type: 3}
       propertyPath: m_LocalPosition.z
-      value: -808.74207
+      value: 4.895508
       objectReference: {fileID: 0}
     - target: {fileID: 4985297385557272633, guid: c11f4c6e33f8941429254e4b9bc3b926, type: 3}
       propertyPath: m_LocalRotation.w
@@ -6638,6 +6633,7 @@ GameObject:
   - component: {fileID: 1350928537}
   - component: {fileID: 1350928539}
   - component: {fileID: 1350928538}
+  - component: {fileID: 1350928540}
   m_Layer: 0
   m_Name: BoxBale
   m_TagString: BoxBalle
@@ -6706,6 +6702,19 @@ BoxCollider2D:
   serializedVersion: 2
   m_Size: {x: 1, y: 12.56}
   m_EdgeRadius: 0
+--- !u!114 &1350928540
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1350928536}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 05014c72856b3d749af3bdbc565c1ad3, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  vaque: {fileID: 1005451528}
 --- !u!1 &1360118911
 GameObject:
   m_ObjectHideFlags: 0
@@ -6805,6 +6814,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   lifeView: {fileID: 1360118916}
   bossPrefab: {fileID: 1531353560}
+  speedAngles: 10
+  anglesMax: 0
 --- !u!114 &1360118916
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -7425,6 +7436,7 @@ MonoBehaviour:
   isCollisonRight: 0
   rayLength: 0.5
   animator: {fileID: 1423034092}
+  gameOver: {fileID: 0}
 --- !u!212 &1423034098
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -7960,6 +7972,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   lifeView: {fileID: 1474396743}
   bossPrefab: {fileID: 1531353560}
+  speedAngles: 10
+  anglesMax: 0
 --- !u!212 &1474396745
 SpriteRenderer:
   m_ObjectHideFlags: 0

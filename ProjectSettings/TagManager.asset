@@ -13,6 +13,7 @@ TagManager:
   - BoxFireActive
   - BouclierCharacter
   - ArmureBoss
+  - BoxIsActiveVague
   layers:
   - Default
   - TransparentFX
