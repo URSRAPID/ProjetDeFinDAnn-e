@@ -139,6 +139,8 @@ public class CharacterControler1 : MonoBehaviour
 
         bouclierView.transform.position = new Vector2(characterModel.GetPosition().GetValue().x + deltaPositionBouclier, characterModel.GetPosition().GetValue().y);
 
+
+        Dead();
     }
 
     public void OnDamage()
@@ -157,8 +159,12 @@ public class CharacterControler1 : MonoBehaviour
 
     public void Dead()
     {
-        animator.SetTrigger("Dead");
+        if (characterModel.GetLife().GetValue().GetValue() <= 0)
+        {
 
+            animator.SetTrigger("Dead");
+           
+        }
         // ici du coup j'ai fais la fonction qui fait que ca lancera le trigger animation de la mort, manque plus qu'à mettre " Dead(); " à la fin de la condition de mort et c good (comme à la ligne 171 pour Hit();
     }
 
@@ -167,9 +173,12 @@ public class CharacterControler1 : MonoBehaviour
     {
         if (collision.gameObject.tag == "Enemy" || collision.gameObject.tag == "BalleEnemy")
         {
-            OnDamage();
-            Hit();
-
+            if (characterModel.GetLife().GetValue().GetValue() >= 1)
+            {
+                OnDamage();
+                Hit();
+            }
+                
         }
     }
 
