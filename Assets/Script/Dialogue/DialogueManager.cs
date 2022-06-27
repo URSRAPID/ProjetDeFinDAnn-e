@@ -3,6 +3,10 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
 using TMPro;
+using UnityEngine.SceneManagement;
+
+
+
 
 public class DialogueManager : MonoBehaviour
 {
@@ -16,6 +20,8 @@ public class DialogueManager : MonoBehaviour
     bool quit = false;
 
     private Queue<string> sentences;
+
+    public Object sceneToLoad;
 
 
 
@@ -62,10 +68,10 @@ public class DialogueManager : MonoBehaviour
 
     IEnumerator TypeSentence (string sentence)
     {
-        float waitTime = 0.1f;
+        float waitTime = 0.05f;
         dialogueText.text = "";
 
-        waitTime = 0.1f;
+        waitTime = 0.05f;
         foreach (char letter in sentence.ToCharArray())
         {
             dialogueText.text += letter;
@@ -95,7 +101,10 @@ public class DialogueManager : MonoBehaviour
     void EndDialogue()
     {
         animator.SetBool("isOpen", false);
+        
+        SceneManager.LoadScene(sceneToLoad.name);
+
     }
 
-    
+
 }
