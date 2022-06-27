@@ -259,11 +259,11 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   dialogue:
-    name: Alpha
+    name: Kevin MitNickname
     sentences:
-    - Hello i'm Alpha ...
-    - I'm a new player lmao i'm to good for you, i'am a big hacker
-    - The most powerful hacker of the world MOUAHAHAHAHHA ... !!!
+    - Bonjour Anonymousse
+    - On m'a dit que tu voulais travailler pour notre organisation ?...
+    - Je vais te gui
 --- !u!114 &196668146
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -748,7 +748,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: NPC Name Here
+  m_text: Kevin MitNickName
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 0183ccade627dc14c91a4bd3d5744bfe, type: 2}
   m_sharedMaterial: {fileID: 1089656546371719049, guid: 0183ccade627dc14c91a4bd3d5744bfe, type: 2}
