@@ -18,7 +18,7 @@ public class MenuController : MonoBehaviour
 
     public void StartGame()
     {
-        UnityEngine.SceneManagement.SceneManager.LoadScene("SampleScene");
+        UnityEngine.SceneManagement.SceneManager.LoadScene("LevelSelection");
 
         Debug.Log("START");
     }
@@ -37,6 +37,22 @@ public class MenuController : MonoBehaviour
         Application.Quit();
 
         Debug.Log("QUIT");
+    }
+
+    public void RestartGame()
+    {
+        string currentSceneName = SceneManager.GetActiveScene().name;
+        UnityEngine.SceneManagement.SceneManager.LoadScene(currentSceneName);
+    }
+
+    public void LevelSelection()
+    {
+        UnityEngine.SceneManagement.SceneManager.LoadScene("LevelSelection");
+    }
+
+    public void Menu()
+    {
+        UnityEngine.SceneManagement.SceneManager.LoadScene("Menu");
     }
 
 
