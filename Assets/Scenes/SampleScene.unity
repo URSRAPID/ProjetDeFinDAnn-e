@@ -18775,7 +18775,7 @@ MonoBehaviour:
   cooldownSpawnPool: -0.52
   firePoint: {fileID: 1380042918}
   _isActive: 0
-  numberOfProjectiles: 5
+  numberOfProjectiles: 1
   angleShoot: 9
   moveSpeed: 15
   shoot: {fileID: 832106429}
@@ -34337,8 +34337,8 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 894338267}
-  - {fileID: 821595164}
   - {fileID: 1035572485}
+  - {fileID: 821595164}
   - {fileID: 1255685732}
   - {fileID: 554140614}
   - {fileID: 936583987}
@@ -34677,6 +34677,22 @@ PrefabInstance:
     - target: {fileID: 8447595347676614829, guid: 907bb924e0a16044da561bdcbdfb71ce, type: 3}
       propertyPath: m_LocalPosition.y
       value: 4.43
+      objectReference: {fileID: 0}
+    - target: {fileID: 8447595348296772998, guid: 907bb924e0a16044da561bdcbdfb71ce, type: 3}
+      propertyPath: m_position.x
+      value: 39.028744
+      objectReference: {fileID: 0}
+    - target: {fileID: 8447595348296772998, guid: 907bb924e0a16044da561bdcbdfb71ce, type: 3}
+      propertyPath: m_followingControlPointPosition.x
+      value: 40.028744
+      objectReference: {fileID: 0}
+    - target: {fileID: 8447595348296772998, guid: 907bb924e0a16044da561bdcbdfb71ce, type: 3}
+      propertyPath: m_precedingControlPointPosition.x
+      value: 38.028744
+      objectReference: {fileID: 0}
+    - target: {fileID: 8447595348296772999, guid: 907bb924e0a16044da561bdcbdfb71ce, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 8.597828
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 907bb924e0a16044da561bdcbdfb71ce, type: 3}
@@ -39997,11 +40013,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 1770877398594054182, guid: 579ff9b8392b441478858f3dc9c70c7c, type: 3}
       propertyPath: m_SpriteTilingProperty.newSize.x
-      value: 1.0000002
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 1770877398594054182, guid: 579ff9b8392b441478858f3dc9c70c7c, type: 3}
       propertyPath: m_SpriteTilingProperty.newSize.y
-      value: 0.023719188
+      value: 0.02
       objectReference: {fileID: 0}
     - target: {fileID: 1770877398594054182, guid: 579ff9b8392b441478858f3dc9c70c7c, type: 3}
       propertyPath: m_SpriteTilingProperty.oldSize.x
@@ -40012,20 +40028,28 @@ PrefabInstance:
       value: 20
       objectReference: {fileID: 0}
     - target: {fileID: 1770877398594054182, guid: 579ff9b8392b441478858f3dc9c70c7c, type: 3}
+      propertyPath: m_SpriteTilingProperty.adaptiveTiling
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 1770877398594054182, guid: 579ff9b8392b441478858f3dc9c70c7c, type: 3}
       propertyPath: m_SpriteTilingProperty.adaptiveTilingThreshold
-      value: 0.5
+      value: 0.496
       objectReference: {fileID: 0}
     - target: {fileID: 2993368571809593240, guid: 579ff9b8392b441478858f3dc9c70c7c, type: 3}
       propertyPath: m_Size.x
-      value: 1.0000002
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 2993368571809593240, guid: 579ff9b8392b441478858f3dc9c70c7c, type: 3}
       propertyPath: m_Size.y
-      value: 0.023719188
+      value: 0.02
       objectReference: {fileID: 0}
     - target: {fileID: 2993368571809593240, guid: 579ff9b8392b441478858f3dc9c70c7c, type: 3}
       propertyPath: m_DrawMode
       value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 2993368571809593240, guid: 579ff9b8392b441478858f3dc9c70c7c, type: 3}
+      propertyPath: m_AdaptiveModeThreshold
+      value: 0.496
       objectReference: {fileID: 0}
     - target: {fileID: 4393310879430944500, guid: 579ff9b8392b441478858f3dc9c70c7c, type: 3}
       propertyPath: m_Name
@@ -45736,6 +45760,26 @@ PrefabInstance:
     - target: {fileID: 8447595347676614828, guid: 907bb924e0a16044da561bdcbdfb71ce, type: 3}
       propertyPath: m_loop
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8447595347676614829, guid: 907bb924e0a16044da561bdcbdfb71ce, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 2.25
+      objectReference: {fileID: 0}
+    - target: {fileID: 8447595348296772998, guid: 907bb924e0a16044da561bdcbdfb71ce, type: 3}
+      propertyPath: m_position.x
+      value: 19.707508
+      objectReference: {fileID: 0}
+    - target: {fileID: 8447595348296772998, guid: 907bb924e0a16044da561bdcbdfb71ce, type: 3}
+      propertyPath: m_followingControlPointPosition.x
+      value: 20.707508
+      objectReference: {fileID: 0}
+    - target: {fileID: 8447595348296772998, guid: 907bb924e0a16044da561bdcbdfb71ce, type: 3}
+      propertyPath: m_precedingControlPointPosition.x
+      value: 18.707508
+      objectReference: {fileID: 0}
+    - target: {fileID: 8447595348296772999, guid: 907bb924e0a16044da561bdcbdfb71ce, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 8.066597
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 907bb924e0a16044da561bdcbdfb71ce, type: 3}
