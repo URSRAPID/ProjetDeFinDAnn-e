@@ -8,6 +8,7 @@ public class Enemy1Controller : MonoBehaviour
     Vector2 whereToSpawn;
     [SerializeField] public GameObject _spawnPrefabPowerUpLife;
     [SerializeField] public GameObject _spawnPrefabPowerUpMP;
+    [SerializeField] public GameObject _spawnPrefabPowerUpCharacter;
     [SerializeField] public GameObject _spawnPointPowerUp;
 
     [SerializeField] public ScoreController _scoreController;
@@ -39,7 +40,7 @@ public class Enemy1Controller : MonoBehaviour
             OnDamage();
             if (enemyModel.GetLife().GetValue().GetValue() <= 0)
             {
-                powerUpLiefOuMp = Random.Range(0, 6);
+                powerUpLiefOuMp = Random.Range(0, 10);
 
                 if (powerUpLiefOuMp == 2)
                 {
@@ -48,6 +49,10 @@ public class Enemy1Controller : MonoBehaviour
                 else if (powerUpLiefOuMp == 1)
                 {
                     SpawnPowerUpMp();
+                }
+                else if (powerUpLiefOuMp == 3)
+                {
+                    SpawnPowerUpCharacter();
                 }
                 Debug.Log(powerUpLiefOuMp);
                 if (!_isDead)
@@ -64,7 +69,7 @@ public class Enemy1Controller : MonoBehaviour
             if (enemyModel.GetLife().GetValue().GetValue() <= 0)
             {
 
-                powerUpLiefOuMp = Random.Range(0, 3);
+                powerUpLiefOuMp = Random.Range(0, 10);
 
                 if (powerUpLiefOuMp == 2)
                 {
@@ -73,6 +78,10 @@ public class Enemy1Controller : MonoBehaviour
                 else if (powerUpLiefOuMp == 1)
                 {
                     SpawnPowerUpMp();
+                }
+                else if (powerUpLiefOuMp == 3)
+                {
+                    SpawnPowerUpCharacter();
                 }
 
                 Debug.Log(powerUpLiefOuMp);
@@ -90,7 +99,7 @@ public class Enemy1Controller : MonoBehaviour
             if (enemyModel.GetLife().GetValue().GetValue() <= 0)
             {
 
-                powerUpLiefOuMp = Random.Range(0, 3);
+                powerUpLiefOuMp = Random.Range(0, 10);
 
                 if (powerUpLiefOuMp == 2)
                 {
@@ -100,7 +109,10 @@ public class Enemy1Controller : MonoBehaviour
                 {
                     SpawnPowerUpMp();
                 }
-
+                else if (powerUpLiefOuMp == 3)
+                {
+                    SpawnPowerUpCharacter();
+                }
                 Debug.Log(powerUpLiefOuMp);
                 if (!_isDead)
                 {
@@ -121,7 +133,11 @@ public class Enemy1Controller : MonoBehaviour
         whereToSpawn = new Vector2(_spawnPointPowerUp.transform.position.x, _spawnPointPowerUp.transform.position.y);
         GameObject clientSpecial = Instantiate(_spawnPrefabPowerUpMP, whereToSpawn, Quaternion.identity);
     }
-
+    private void SpawnPowerUpCharacter()
+    {
+        whereToSpawn = new Vector2(_spawnPointPowerUp.transform.position.x, _spawnPointPowerUp.transform.position.y);
+        GameObject clientSpecial = Instantiate(_spawnPrefabPowerUpCharacter, whereToSpawn, Quaternion.identity);
+    }
     public bool GetIsDead()
     {
         return _isDead;
