@@ -18,6 +18,8 @@ TagManager:
   - BoxActiveSpline
   - PowerUpLifeCharacter
   - PowerUpManaBouclierCharacter
+  - BouclierIsActive
+  - EnemyTour
   layers:
   - Default
   - TransparentFX

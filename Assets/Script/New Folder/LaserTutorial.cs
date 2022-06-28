@@ -12,6 +12,8 @@ public class LaserTutorial : MonoBehaviour
     [SerializeField] public int IgnoreLaserLayer;
     Transform m_transform;
 
+    private bool playerHit;
+
     private void Awake()
     {
         m_transform = GetComponent<Transform>();
@@ -36,6 +38,8 @@ public class LaserTutorial : MonoBehaviour
             {
                 Draw2DRay(laserFirePoint.position, _hit.point);
                 Debug.Log("Je touche le Player");
+                playerHit = true;
+                FindObjectOfType<CharacterControler1>().AddDamageLaser(this);
             }
             else if (_hit.transform.gameObject.layer == ShieldLayer)
             {
@@ -53,5 +57,11 @@ public class LaserTutorial : MonoBehaviour
             m_lineRenderer.SetPosition(0, startPos);
             m_lineRenderer.SetPosition(1, endPos);
         }
+
+        
+    }
+    public bool GetPlayerHit()
+    {
+        return playerHit;
     }
 }

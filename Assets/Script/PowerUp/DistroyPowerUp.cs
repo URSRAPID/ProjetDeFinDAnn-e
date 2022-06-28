@@ -4,6 +4,7 @@ using UnityEngine;
 
 public class DistroyPowerUp : MonoBehaviour
 {
+    public float _destroy = 10;
     // Start is called before the first frame update
     void Start()
     {
@@ -18,7 +19,7 @@ public class DistroyPowerUp : MonoBehaviour
 
     void OnEnable()
     {
-        Invoke("OnDisable", 10.0f); 
+        Invoke("OnDisable", _destroy); 
     }
 
     private void OnDisable()

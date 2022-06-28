@@ -1,13 +1,12 @@
+using System.Collections;
+using System.Collections.Generic;
 using UnityEngine;
-using Random = UnityEngine.Random;
 
-public class EnemyController : MonoBehaviour
+public class Enemy2Controller : MonoBehaviour
 {
-
-
     [SerializeField] private float cooldownSpawnPool;
 
-    private PoolManagerEnemy _pool;
+    private PoolManagerEnemyTour _pool;
     public Transform firePoint;
 
     private float currentCoolDown;
@@ -29,8 +28,8 @@ public class EnemyController : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        enemyModel = new EnemyModel( 3, 3);
-        _pool = GameObject.FindObjectOfType<PoolManagerEnemy>();
+        enemyModel = new EnemyModel(4, 4);
+        _pool = GameObject.FindObjectOfType<PoolManagerEnemyTour>();
         if (cooldownSpawnPool == 0)
         {
             cooldownSpawnPool = 1;
@@ -106,7 +105,7 @@ public class EnemyController : MonoBehaviour
     }
     private void OnCollisionEnter2D(Collision2D collision)
     {
-        if (collision.gameObject.tag == "BalleCharacter" )
+        if (collision.gameObject.tag == "BalleCharacter")
         {
             OnDamage();
             if (enemyModel.GetLife().GetValue().GetValue() <= 0)
@@ -125,10 +124,10 @@ public class EnemyController : MonoBehaviour
                 if (!_isDead)
                 {
                     _isDead = true;
-                    FindObjectOfType<ScoreController>().AddScoreEnemy(this);
+                    FindObjectOfType<ScoreController>().AddScoreEnemy3(this);
                 }
             }
-            
+
 
         }
         if (collision.gameObject.tag == "BouclierCharacter")
@@ -136,6 +135,7 @@ public class EnemyController : MonoBehaviour
             OnDamage();
             OnDamage();
             OnDamage();
+            OnDamage();
             if (enemyModel.GetLife().GetValue().GetValue() <= 0)
             {
                 powerUpLiefOuMp = Random.Range(0, 6);
@@ -152,13 +152,15 @@ public class EnemyController : MonoBehaviour
                 if (!_isDead)
                 {
                     _isDead = true;
-                    FindObjectOfType<ScoreController>().AddScoreEnemy(this);
+                    FindObjectOfType<ScoreController>().AddScoreEnemy3(this);
                 }
             }
 
         }
-        else if (collision.gameObject.tag == "Character")
+        if (collision.gameObject.tag == "Character")
         {
+            Debug.Log("oui");
+            OnDamage();
             OnDamage();
             OnDamage();
             OnDamage();
@@ -178,15 +180,15 @@ public class EnemyController : MonoBehaviour
                 if (!_isDead)
                 {
                     _isDead = true;
-                    FindObjectOfType<ScoreController>().AddScoreEnemy(this);
+                    FindObjectOfType<ScoreController>().AddScoreEnemy3(this);
                 }
             }
         }
-        else if (collision.gameObject.tag == "BoxBalle")
+        if (collision.gameObject.tag == "BoxBalle")
         {
             _isActive = true;
         }
-        else if (collision.gameObject.tag == "BoxIsActive")
+        if (collision.gameObject.tag == "BoxIsActive")
         {
             Destroy(gameObject);
             _isActive = false;

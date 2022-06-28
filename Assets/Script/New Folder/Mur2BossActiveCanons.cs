@@ -1,5 +1,6 @@
 using UnityEngine;
 
+
 public class Mur2BossActiveCanons : MonoBehaviour
 {
     [SerializeField] private GameObject bossPrefab;
@@ -23,7 +24,7 @@ public class Mur2BossActiveCanons : MonoBehaviour
     {
         if (bossPrefab.transform.eulerAngles.z == anglesBossPrefab)
         {
-            Debug.Log(bossPrefab.transform.eulerAngles.z);
+           
             this.gameObject.SetActive(false);
         }
        

@@ -18,7 +18,7 @@ public class BossController : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        bossModel = new BossModel(300, 300);
+        bossModel = new BossModel(150, 150);
         bossModel.GetLife().Subscribe(lifeView);
     }
 

@@ -10,10 +10,15 @@ public class Enemy1Controller : MonoBehaviour
     [SerializeField] public GameObject _spawnPrefabPowerUpMP;
     [SerializeField] public GameObject _spawnPointPowerUp;
 
+    [SerializeField] public ScoreController _scoreController;
+    private bool _isDead;
+
+    private EnemyModel enemyModel;
 
     // Start is called before the first frame update
     void Start()
     {
+        enemyModel = new EnemyModel(2, 2);
 
     }
 
@@ -22,57 +27,87 @@ public class Enemy1Controller : MonoBehaviour
     {
 
     }
+    public void OnDamage()
+    {
+        enemyModel.AddLife(-1);
+    }
 
     private void OnCollisionEnter2D(Collision2D collision)
     {
-        if (collision.gameObject.tag == "BalleCharacter" )
+        if (collision.gameObject.tag == "BalleCharacter")
         {
-            
-            powerUpLiefOuMp = Random.Range(0, 6);
+            OnDamage();
+            if (enemyModel.GetLife().GetValue().GetValue() <= 0)
+            {
+                powerUpLiefOuMp = Random.Range(0, 6);
 
-            if (powerUpLiefOuMp == 2)
-            {
-                SpawnPowerUpLife();
+                if (powerUpLiefOuMp == 2)
+                {
+                    SpawnPowerUpLife();
+                }
+                else if (powerUpLiefOuMp == 1)
+                {
+                    SpawnPowerUpMp();
+                }
+                Debug.Log(powerUpLiefOuMp);
+                if (!_isDead)
+                {
+                    _isDead = true;
+                    FindObjectOfType<ScoreController>().AddScoreEnemy2(this);
+                }
             }
-            else if (powerUpLiefOuMp == 1)
-            {
-                SpawnPowerUpMp();
-            }
-            Debug.Log(powerUpLiefOuMp);
-            Destroy(gameObject);
         }
-        else if (collision.gameObject.tag == "BouclierCharacter" )
+        else if (collision.gameObject.tag == "BouclierCharacter")
         {
-           
-            powerUpLiefOuMp = Random.Range(0, 3);
-
-            if (powerUpLiefOuMp == 2)
+            OnDamage();
+            OnDamage();
+            if (enemyModel.GetLife().GetValue().GetValue() <= 0)
             {
-                SpawnPowerUpLife();
-            }
-            else if (powerUpLiefOuMp == 1)
-            {
-                SpawnPowerUpMp();
-            }
 
-            Debug.Log(powerUpLiefOuMp);
-            Destroy(gameObject);
+                powerUpLiefOuMp = Random.Range(0, 3);
+
+                if (powerUpLiefOuMp == 2)
+                {
+                    SpawnPowerUpLife();
+                }
+                else if (powerUpLiefOuMp == 1)
+                {
+                    SpawnPowerUpMp();
+                }
+
+                Debug.Log(powerUpLiefOuMp);
+                if (!_isDead)
+                {
+                    _isDead = true;
+                    FindObjectOfType<ScoreController>().AddScoreEnemy2(this);
+                }
+            }
         }
-        else if ( collision.gameObject.tag == "Character")
+        else if (collision.gameObject.tag == "Character")
         {
-           
-            powerUpLiefOuMp = Random.Range(0, 3);
+            OnDamage();
+            OnDamage();
+            if (enemyModel.GetLife().GetValue().GetValue() <= 0)
+            {
 
-            if (powerUpLiefOuMp == 2)
-            {
-                SpawnPowerUpLife();
+                powerUpLiefOuMp = Random.Range(0, 3);
+
+                if (powerUpLiefOuMp == 2)
+                {
+                    SpawnPowerUpLife();
+                }
+                else if (powerUpLiefOuMp == 1)
+                {
+                    SpawnPowerUpMp();
+                }
+
+                Debug.Log(powerUpLiefOuMp);
+                if (!_isDead)
+                {
+                    _isDead = true;
+                    FindObjectOfType<ScoreController>().AddScoreEnemy2(this);
+                }
             }
-            else if (powerUpLiefOuMp == 1)
-            {
-                SpawnPowerUpMp();
-            }
-            Debug.Log(powerUpLiefOuMp);
-            Destroy(gameObject);
         }
     }
 
@@ -85,5 +120,10 @@ public class Enemy1Controller : MonoBehaviour
     {
         whereToSpawn = new Vector2(_spawnPointPowerUp.transform.position.x, _spawnPointPowerUp.transform.position.y);
         GameObject clientSpecial = Instantiate(_spawnPrefabPowerUpMP, whereToSpawn, Quaternion.identity);
+    }
+
+    public bool GetIsDead()
+    {
+        return _isDead;
     }
 }

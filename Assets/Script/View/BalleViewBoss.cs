@@ -34,7 +34,12 @@ public class BalleViewBoss : MonoBehaviour
         {
             OnDisable();
         }
-      
+        if (collision.gameObject.tag == "BouclierCharacter")
+        {
+            OnDisable();
+        }
+
+
 
     }
 }

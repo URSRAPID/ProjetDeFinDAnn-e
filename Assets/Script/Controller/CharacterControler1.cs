@@ -45,10 +45,10 @@ public class CharacterControler1 : MonoBehaviour
     public Transform rightDown;
 
     public LayerMask groundLayerMask;
-    public bool isCollisonDown = false;
-    public bool isCollisonUp = false;
-    public bool isCollisonLeft = false;
-    public bool isCollisonRight = false;
+    private bool isCollisonDown = false;
+    private bool isCollisonUp = false;
+    private bool isCollisonLeft = false;
+    private bool isCollisonRight = false;
 
     public float rayLength = 0.5f;
 
@@ -68,6 +68,8 @@ public class CharacterControler1 : MonoBehaviour
     bool loadedOnce = false;
     public AudioSource stopLevelMusic;
     public AudioSource gameoverMusic;
+
+    public bool _bouclierIsActive;
 
     void Start()
     {
@@ -233,28 +235,36 @@ public class CharacterControler1 : MonoBehaviour
             OnDamage();
             Hit();
         }
+        if (collision.gameObject.tag == "BouclierIsActive")
+        {
+            _bouclierIsActive = true;
+        }
 
     }
 
     private void BouclierActive()
     {
-        if (characterModel.GetMp().GetValue().GetValue() > 0)
+        if (_bouclierIsActive == true)
         {
-            if (Input.GetMouseButton(0))
+            if (characterModel.GetMp().GetValue().GetValue() > 0)
             {
-                bouclierView.gameObject.SetActive(true);
-                characterModel.AddMp(-2);
+                if (Input.GetMouseButton(0))
+                {
+                    bouclierView.gameObject.SetActive(true);
+                    characterModel.AddMp(-2);
+                }
+                else
+                {
+                    bouclierView.gameObject.SetActive(false);
+                }
             }
-            else
+
+            if (characterModel.GetMp().GetValue().GetValue() <= minMP)
             {
                 bouclierView.gameObject.SetActive(false);
             }
         }
-
-        if (characterModel.GetMp().GetValue().GetValue() <= minMP) 
-        {
-            bouclierView.gameObject.SetActive(false);
-        }
+        
     }
 
     void OnDrawGizmos()
@@ -315,7 +325,7 @@ public class CharacterControler1 : MonoBehaviour
         if (rightUpHit.collider != null || rightDownHit.collider != null)
         {
             isCollisonRight = true;
-            speedCam = 5;
+            speedCam = 0;
         }
         else
         {
@@ -323,6 +333,16 @@ public class CharacterControler1 : MonoBehaviour
             speedCam = 0.0F ;
         }
 
+    }
+
+    public void AddDamageLaser(LaserTutorial _laserDamage)
+    {
+        Debug.Log("Oui");
+        if (_laserDamage != null && _laserDamage.GetPlayerHit() == true)
+        {
+            Debug.Log("Oui2");
+            OnDamage();
+        }
     }
     
 
