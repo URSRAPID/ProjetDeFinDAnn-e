@@ -27,7 +27,7 @@ public class Enemy1Controller : MonoBehaviour
     {
         if (collision.gameObject.tag == "BalleCharacter" )
         {
-            Destroy(gameObject);
+            
             powerUpLiefOuMp = Random.Range(0, 3);
 
             if (powerUpLiefOuMp == 2)
@@ -39,10 +39,11 @@ public class Enemy1Controller : MonoBehaviour
                 SpawnPowerUpMp();
             }
             Debug.Log(powerUpLiefOuMp);
+            Destroy(gameObject);
         }
         else if (collision.gameObject.tag == "BouclierCharacter" )
         {
-            Destroy(gameObject);
+           
             powerUpLiefOuMp = Random.Range(0, 3);
 
             if (powerUpLiefOuMp == 2)
@@ -55,10 +56,11 @@ public class Enemy1Controller : MonoBehaviour
             }
 
             Debug.Log(powerUpLiefOuMp);
+            Destroy(gameObject);
         }
         else if ( collision.gameObject.tag == "Character")
         {
-            Destroy(gameObject);
+           
             powerUpLiefOuMp = Random.Range(0, 3);
 
             if (powerUpLiefOuMp == 2)
@@ -70,6 +72,7 @@ public class Enemy1Controller : MonoBehaviour
                 SpawnPowerUpMp();
             }
             Debug.Log(powerUpLiefOuMp);
+            Destroy(gameObject);
         }
     }
 
@@ -77,12 +80,10 @@ public class Enemy1Controller : MonoBehaviour
     {
         whereToSpawn = new Vector2(_spawnPointPowerUp.transform.position.x, _spawnPointPowerUp.transform.position.y);
         GameObject clientSpecial = Instantiate(_spawnPrefabPowerUpLife, whereToSpawn, Quaternion.identity);
-        clientSpecial.transform.SetParent(_spawnPointPowerUp.transform);
     }
     private void SpawnPowerUpMp()
     {
         whereToSpawn = new Vector2(_spawnPointPowerUp.transform.position.x, _spawnPointPowerUp.transform.position.y);
         GameObject clientSpecial = Instantiate(_spawnPrefabPowerUpMP, whereToSpawn, Quaternion.identity);
-        clientSpecial.transform.SetParent(_spawnPointPowerUp.transform);
     }
 }

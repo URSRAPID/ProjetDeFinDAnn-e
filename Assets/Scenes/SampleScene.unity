@@ -19359,7 +19359,7 @@ MonoBehaviour:
   cooldownSpawnPool: -0.52
   firePoint: {fileID: 1380042918}
   _isActive: 1
-  numberOfProjectiles: 10
+  numberOfProjectiles: 1
   angleShoot: 9
   moveSpeed: 15
   shoot: {fileID: 832106429}
