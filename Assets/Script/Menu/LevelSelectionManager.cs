@@ -7,21 +7,17 @@ using TMPro;
 
 public class LevelSelectionManager : MonoBehaviour
 {
-    public void Level1()
-    {
-        UnityEngine.SceneManagement.SceneManager.LoadScene("Dialogue");
+    public Button[] lvlButtons;
 
+    void Start()
+    {
+        int levelAt = PlayerPrefs.GetInt("levelAt", 2);
+
+        for (int i=0; i < lvlButtons.Length; i++)
+        {
+            if (i + 2 > levelAt)
+                lvlButtons[i].interactable = false;
+        }
     }
 
-    public void Level2()
-    {
-        UnityEngine.SceneManagement.SceneManager.LoadScene("Level 2");
-
-    }
-
-    public void Level3()
-    {
-        UnityEngine.SceneManagement.SceneManager.LoadScene("Level 3");
-
-    }
 }

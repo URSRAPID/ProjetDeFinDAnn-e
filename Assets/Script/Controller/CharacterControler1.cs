@@ -320,7 +320,7 @@ public class CharacterControler1 : MonoBehaviour
         else
         {
             isCollisonRight = false;
-            speedCam = 0.0F ;
+            speedCam = 5.0F ;
         }
 
     }

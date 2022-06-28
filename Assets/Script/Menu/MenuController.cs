@@ -19,6 +19,7 @@ public class MenuController : MonoBehaviour
     public void StartGame()
     {
         UnityEngine.SceneManagement.SceneManager.LoadScene("LevelSelection");
+        Time.timeScale = 1;
 
         Debug.Log("START");
     }
@@ -55,6 +56,12 @@ public class MenuController : MonoBehaviour
     public void Menu()
     {
         UnityEngine.SceneManagement.SceneManager.LoadScene("Menu");
+        Time.timeScale = 1;
+    }
+
+    public void Next()
+    {
+        UnityEngine.SceneManagement.SceneManager.LoadScene("LevelSelection");
         Time.timeScale = 1;
     }
 
