@@ -19,9 +19,10 @@ public class EnemyController : MonoBehaviour
     [SerializeField] public GameObject _spawnPrefabPowerUpLife;
     [SerializeField] public GameObject _spawnPrefabPowerUpMP;
     [SerializeField] public GameObject _spawnPointPowerUp;
+    [SerializeField] public ScoreController _scoreController;
 
-    private bool _spawnPowerUpLife = false;
-    private bool _spawnPowerUpMp = false;
+    private bool _isDead = false;
+
 
     // Start is called before the first frame update
     void Start()
@@ -51,7 +52,6 @@ public class EnemyController : MonoBehaviour
 
             }
         }
-
 
 
 
@@ -110,8 +110,7 @@ public class EnemyController : MonoBehaviour
             {
                 SpawnPowerUpLife();
             }
-            Debug.Log(powerUpLiefOuMp);
-            Destroy(gameObject);
+
         }
         else if (collision.gameObject.tag == "BoxBalle")
         {
@@ -134,5 +133,10 @@ public class EnemyController : MonoBehaviour
     {
         whereToSpawn = new Vector2(_spawnPointPowerUp.transform.position.x, _spawnPointPowerUp.transform.position.y);
         GameObject clientSpecial = Instantiate(_spawnPrefabPowerUpMP, whereToSpawn, Quaternion.identity);
+    }
+
+    public bool GetIsDead()
+    {
+        return _isDead;
     }
 }
