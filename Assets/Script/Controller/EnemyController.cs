@@ -100,7 +100,7 @@ public class EnemyController : MonoBehaviour
     {
         if (collision.gameObject.tag == "BalleCharacter" || collision.gameObject.tag == "BouclierCharacter")
         {
-            powerUpLiefOuMp = Random.Range(0, 3);
+            powerUpLiefOuMp = Random.Range(0, 6);
 
             if (powerUpLiefOuMp == 2)
             {
