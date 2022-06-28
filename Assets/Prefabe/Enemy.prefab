@@ -125,7 +125,7 @@ BoxCollider2D:
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
     pivot: {x: 0.5, y: 0.5}
-    oldSize: {x: 10.42, y: 10.42}
+    oldSize: {x: 2.084, y: 2.084}
     newSize: {x: 1, y: 1}
     adaptiveTilingThreshold: 0.5
     drawMode: 0
@@ -148,6 +148,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   cooldownSpawnPool: -0.48
   firePoint: {fileID: 8563638448631562677}
+  _spawnPrefabPowerUpLife: {fileID: 4453662019235921554, guid: 493c4486a9eb4ad4cb4e140cac20ffcc, type: 3}
+  _spawnPrefabPowerUpMP: {fileID: 7753479333689115775, guid: 45dc88ee4e9cfa841ae76f55af0b68e4, type: 3}
+  _spawnPointPowerUp: {fileID: 4932967700178686960}
 --- !u!50 &-8462996395797936332
 Rigidbody2D:
   serializedVersion: 4

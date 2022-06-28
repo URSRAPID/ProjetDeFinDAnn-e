@@ -1,7 +1,16 @@
 using UnityEngine;
+using Random = UnityEngine.Random;
 
 public class Enemy1Controller : MonoBehaviour
 {
+    int powerUpLiefOuMp;
+
+    Vector2 whereToSpawn;
+    [SerializeField] public GameObject _spawnPrefabPowerUpLife;
+    [SerializeField] public GameObject _spawnPrefabPowerUpMP;
+    [SerializeField] public GameObject _spawnPointPowerUp;
+
+
     // Start is called before the first frame update
     void Start()
     {
@@ -19,14 +28,61 @@ public class Enemy1Controller : MonoBehaviour
         if (collision.gameObject.tag == "BalleCharacter" )
         {
             Destroy(gameObject);
+            powerUpLiefOuMp = Random.Range(0, 3);
+
+            if (powerUpLiefOuMp == 2)
+            {
+                SpawnPowerUpLife();
+            }
+            else if (powerUpLiefOuMp == 1)
+            {
+                SpawnPowerUpMp();
+            }
+            Debug.Log(powerUpLiefOuMp);
         }
         else if (collision.gameObject.tag == "BouclierCharacter" )
         {
             Destroy(gameObject);
+            powerUpLiefOuMp = Random.Range(0, 3);
+
+            if (powerUpLiefOuMp == 2)
+            {
+                SpawnPowerUpLife();
+            }
+            else if (powerUpLiefOuMp == 1)
+            {
+                SpawnPowerUpMp();
+            }
+
+            Debug.Log(powerUpLiefOuMp);
         }
         else if ( collision.gameObject.tag == "Character")
         {
             Destroy(gameObject);
+            powerUpLiefOuMp = Random.Range(0, 3);
+
+            if (powerUpLiefOuMp == 2)
+            {
+                SpawnPowerUpLife();
+            }
+            else if (powerUpLiefOuMp == 1)
+            {
+                SpawnPowerUpMp();
+            }
+            Debug.Log(powerUpLiefOuMp);
         }
+    }
+
+    private void SpawnPowerUpLife()
+    {
+        whereToSpawn = new Vector2(_spawnPointPowerUp.transform.position.x, _spawnPointPowerUp.transform.position.y);
+        GameObject clientSpecial = Instantiate(_spawnPrefabPowerUpLife, whereToSpawn, Quaternion.identity);
+        clientSpecial.transform.SetParent(_spawnPointPowerUp.transform);
+    }
+    private void SpawnPowerUpMp()
+    {
+        whereToSpawn = new Vector2(_spawnPointPowerUp.transform.position.x, _spawnPointPowerUp.transform.position.y);
+        GameObject clientSpecial = Instantiate(_spawnPrefabPowerUpMP, whereToSpawn, Quaternion.identity);
+        clientSpecial.transform.SetParent(_spawnPointPowerUp.transform);
     }
 }

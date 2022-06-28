@@ -210,6 +210,30 @@ public class CharacterControler1 : MonoBehaviour
             }
                 
         }
+        if (collision.gameObject.tag == "PowerUpLifeCharacter")
+        {
+            if (characterModel.GetLife().GetValue().GetValue() < 3)
+            {
+                
+                characterModel.AddLife(1);
+                Debug.Log(characterModel.GetLife().GetValue().GetValue());
+            }
+           
+        }
+        if (collision.gameObject.tag == "PowerUpManaBouclierCharacter")
+        {
+            if (characterModel.GetMp().GetValue().GetValue() < 10000)
+            {
+                characterModel.AddMp(1000);
+            }
+            
+        }
+        if (collision.gameObject.tag == "Laser")
+        {
+            OnDamage();
+            Hit();
+        }
+
     }
 
     private void BouclierActive()
@@ -219,7 +243,7 @@ public class CharacterControler1 : MonoBehaviour
             if (Input.GetMouseButton(0))
             {
                 bouclierView.gameObject.SetActive(true);
-                characterModel.AddMp(-5);
+                characterModel.AddMp(-2);
             }
             else
             {
@@ -296,7 +320,7 @@ public class CharacterControler1 : MonoBehaviour
         else
         {
             isCollisonRight = false;
-            speedCam = 5.0F ;
+            speedCam = 0.0F ;
         }
 
     }

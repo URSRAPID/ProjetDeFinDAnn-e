@@ -14,6 +14,10 @@ TagManager:
   - BouclierCharacter
   - ArmureBoss
   - BoxIsActiveVague
+  - PowerUpGunCharacter
+  - BoxActiveSpline
+  - PowerUpLifeCharacter
+  - PowerUpManaBouclierCharacter
   layers:
   - Default
   - TransparentFX

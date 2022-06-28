@@ -169,6 +169,10 @@ public class Shoot : MonoBehaviour
             _isActive = true;
             Debug.Log("OnCollisionEnter2D");
         }
+        if (collision.gameObject.tag == "PowerUpGunCharacter")
+        {
+            numberOfProjectiles = numberOfProjectiles + 1;
+        }
     }
 
 

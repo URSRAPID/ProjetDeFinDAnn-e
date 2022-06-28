@@ -23,6 +23,7 @@ public class Trajectory : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
+       
         currentCooldown -= Time.deltaTime;
         if (currentCooldown <= 0 && currentSpawnedEnnemy < nbEnnemi)
         {

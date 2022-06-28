@@ -2,7 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class DistroyPowerUp : MonoBehaviour
+public class PowerUpGunCharacter : MonoBehaviour
 {
     // Start is called before the first frame update
     void Start()
@@ -15,14 +15,12 @@ public class DistroyPowerUp : MonoBehaviour
     {
         
     }
-
-    void OnEnable()
+    private void OnCollisionEnter2D(Collision2D collision)
     {
-        Invoke("OnDisable", 5.0f); 
-    }
-
-    private void OnDisable()
-    {
-        Destroy(gameObject);
+       
+        if (collision.gameObject.tag == "Character")
+        {
+            Destroy(gameObject);
+        }
     }
 }

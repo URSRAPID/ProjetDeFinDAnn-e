@@ -1,4 +1,5 @@
 using UnityEngine;
+using Random = UnityEngine.Random;
 
 public class EnemyController : MonoBehaviour
 {
@@ -13,6 +14,11 @@ public class EnemyController : MonoBehaviour
     private bool _isActive = false;
     //public float bulletSpeed = 10f;
 
+    int powerUpLiefOuMp;
+    Vector2 whereToSpawn;
+    [SerializeField] public GameObject _spawnPrefabPowerUpLife;
+    [SerializeField] public GameObject _spawnPrefabPowerUpMP;
+    [SerializeField] public GameObject _spawnPointPowerUp;
 
     // Start is called before the first frame update
     void Start()
@@ -87,8 +93,19 @@ public class EnemyController : MonoBehaviour
         if (collision.gameObject.tag == "BalleCharacter" || collision.gameObject.tag == "BouclierCharacter")
         {
             Destroy(gameObject);
+            powerUpLiefOuMp = Random.Range(0, 3);
+
+            if (powerUpLiefOuMp == 2)
+            {
+                SpawnPowerUpLife();
+            }
+            else if (powerUpLiefOuMp == 1)
+            {
+                SpawnPowerUpMp();
+            }
+            Debug.Log(powerUpLiefOuMp);
         }
-        else if(collision.gameObject.tag == "MainCamera")
+        else if(collision.gameObject.tag == "BoxBalle")
         {
             _isActive = true;
         }
@@ -100,5 +117,16 @@ public class EnemyController : MonoBehaviour
         }
     }
 
-
+    private void SpawnPowerUpLife()
+    {
+        whereToSpawn = new Vector2(_spawnPointPowerUp.transform.position.x, _spawnPointPowerUp.transform.position.y);
+        GameObject clientSpecial = Instantiate(_spawnPrefabPowerUpLife, whereToSpawn, Quaternion.identity);
+        clientSpecial.transform.SetParent(_spawnPointPowerUp.transform);
+    }
+    private void SpawnPowerUpMp()
+    {
+        whereToSpawn = new Vector2(_spawnPointPowerUp.transform.position.x, _spawnPointPowerUp.transform.position.y);
+        GameObject clientSpecial = Instantiate(_spawnPrefabPowerUpMP, whereToSpawn, Quaternion.identity);
+        clientSpecial.transform.SetParent(_spawnPointPowerUp.transform);
+    }
 }
