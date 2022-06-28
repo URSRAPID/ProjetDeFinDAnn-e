@@ -20,8 +20,9 @@ public class EnemyController : MonoBehaviour
     [SerializeField] public GameObject _spawnPrefabPowerUpMP;
     [SerializeField] public GameObject _spawnPointPowerUp;
     [SerializeField] public ScoreController _scoreController;
+    private bool _isDead;
 
-    private bool _isDead = false;
+
 
 
     // Start is called before the first frame update
@@ -109,6 +110,12 @@ public class EnemyController : MonoBehaviour
             else if (powerUpLiefOuMp == 1)
             {
                 SpawnPowerUpLife();
+            }
+
+            if (!_isDead)
+            {
+                _isDead = true;
+                FindObjectOfType<ScoreController>().AddScoreEnemy(this);
             }
 
         }

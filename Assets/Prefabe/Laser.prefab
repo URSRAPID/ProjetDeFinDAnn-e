@@ -207,6 +207,8 @@ MonoBehaviour:
   defDistanceRay: 100
   m_lineRenderer: {fileID: 7595481317638380302}
   laserFirePoint: {fileID: 7595481318024322272}
+  PlayerLayer: 8
+  ShieldLayer: 9
 --- !u!1 &7595481318024322275
 GameObject:
   m_ObjectHideFlags: 0

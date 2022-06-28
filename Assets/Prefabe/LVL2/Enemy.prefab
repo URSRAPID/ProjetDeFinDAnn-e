@@ -178,6 +178,10 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   cooldownSpawnPool: -0.48
   firePoint: {fileID: 892635098253299770}
+  _spawnPrefabPowerUpLife: {fileID: 4453662019235921554, guid: 493c4486a9eb4ad4cb4e140cac20ffcc, type: 3}
+  _spawnPrefabPowerUpMP: {fileID: 7753479333689115775, guid: 45dc88ee4e9cfa841ae76f55af0b68e4, type: 3}
+  _spawnPointPowerUp: {fileID: 4525566584344838783}
+  _scoreController: {fileID: 0}
 --- !u!50 &8085655358974809787
 Rigidbody2D:
   serializedVersion: 4

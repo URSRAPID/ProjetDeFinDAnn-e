@@ -5,7 +5,7 @@ public class ScoreController : MonoBehaviour
 {
 
     private ScoreModel _scoreModel;
-    [SerializeField] public EnemyController _enemyController ;
+    //[SerializeField] public EnemyController _enemyController ;
 
     [SerializeField] private FloatView _scoreView;
     // Start is called before the first frame update
@@ -18,10 +18,10 @@ public class ScoreController : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        AddScoreEnemy();
+        //AddScoreEnemy();
     }
 
-    void AddScoreEnemy()
+    public void AddScoreEnemy(EnemyController _enemyController)
     {
         Debug.Log("Oui");
         if (_enemyController != null && _enemyController.GetIsDead() == true)

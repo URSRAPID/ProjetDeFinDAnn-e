@@ -9,6 +9,7 @@ public class LaserTutorial : MonoBehaviour
     [SerializeField] public Transform laserFirePoint;
     [SerializeField] public int PlayerLayer;
     [SerializeField] public int ShieldLayer;
+    [SerializeField] public int IgnoreLaserLayer;
     Transform m_transform;
 
     private void Awake()
@@ -16,22 +17,26 @@ public class LaserTutorial : MonoBehaviour
         m_transform = GetComponent<Transform>();
     }
 
+
     private void Update()
     {
+        IgnoreLaserLayer = 1 << 10;
+        IgnoreLaserLayer = ~IgnoreLaserLayer;
         ShootLaser();
     }
 
     void ShootLaser()
     {
-        if (Physics2D.Raycast(m_transform.position, transform.right, Mathf.Infinity))
+        if (Physics2D.Raycast(m_transform.position, transform.right, Mathf.Infinity, IgnoreLaserLayer))
         {
-            RaycastHit2D _hit = Physics2D.Raycast(laserFirePoint.position, transform.right);
 
-            if(_hit.transform.gameObject.layer == PlayerLayer)
+            RaycastHit2D _hit = Physics2D.Raycast(laserFirePoint.position, transform.right);
+     
+            if (_hit.transform.gameObject.layer == PlayerLayer)
             {
                 Draw2DRay(laserFirePoint.position, _hit.point);
                 Debug.Log("Je touche le Player");
-            }           
+            }
             else if (_hit.transform.gameObject.layer == ShieldLayer)
             {
                 Draw2DRay(laserFirePoint.position, _hit.point);
