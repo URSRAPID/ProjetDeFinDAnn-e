@@ -12,6 +12,7 @@ public class CharacterControler1 : MonoBehaviour
     [SerializeField] private Transform cam;
 
     private CharacterModel characterModel;
+    private HealthView _healthLife;
 
 
     [SerializeField] private BouclierView bouclierView;
@@ -161,6 +162,7 @@ public class CharacterControler1 : MonoBehaviour
     public void OnDamage()
     {
         characterModel.AddLife(-1);
+        GameObject.FindObjectOfType<HealthView>().health = GameObject.FindObjectOfType<HealthView>().health - 1;
 
 
 
@@ -220,6 +222,7 @@ public class CharacterControler1 : MonoBehaviour
             {
                 
                 characterModel.AddLife(1);
+                GameObject.FindObjectOfType<HealthView>().health = GameObject.FindObjectOfType<HealthView>().health + 1;
                 Debug.Log(characterModel.GetLife().GetValue().GetValue());
             }
            
