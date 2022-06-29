@@ -4,13 +4,13 @@ using UnityEngine;
 
 public class BossModel
 {
-    public VectorObservable _position;
+    [SerializeField] private LifeView lifeView;
     private FloatObservable _life;
 
 
     public BossModel( float initLife, float maxLife)
     {
-        //_position = new VectorObservable(x, y);
+        
         _life = new FloatObservable(initLife, maxLife);
         
     }

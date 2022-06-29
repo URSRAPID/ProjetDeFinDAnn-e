@@ -145,10 +145,6 @@ public class CharacterControler1 : MonoBehaviour
 
 
 
-
-
-        
-
         characterModel.AddPosition(moveCam + deltaPosition);
         
 
