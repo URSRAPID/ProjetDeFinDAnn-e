@@ -1,7 +1,7 @@
 using UnityEngine;
 using System.Collections;
 using System.Collections.Generic;
-
+using TMPro;
 
 public class CharacterControler1 : MonoBehaviour
 {
@@ -196,7 +196,9 @@ public class CharacterControler1 : MonoBehaviour
         yield return new WaitForSeconds(tempsEnSecondes);
         Time.timeScale = 0;
         stopLevelMusic.Stop();
+        
         gameOver.SetActive(true);
+        gameOver.transform.Find("Score").Find("Text Score FLOAT").GetComponent<TextMeshProUGUI>().text = GameObject.FindObjectOfType<ScoreController>().GetScoreModel().GetScore().GetValue().ToString();
         gameoverMusic.Play();
     }
 
@@ -330,7 +332,7 @@ public class CharacterControler1 : MonoBehaviour
         else
         {
             isCollisonRight = false;
-            speedCam = 0.0F ;
+            speedCam = 5.0F ;
         }
 
     }

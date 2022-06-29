@@ -52,4 +52,8 @@ public class ScoreController : MonoBehaviour
             Destroy(_enemy2Controller.gameObject);
         }
     }
+    public ScoreModel GetScoreModel()
+    {
+        return _scoreModel;
+    }
 }

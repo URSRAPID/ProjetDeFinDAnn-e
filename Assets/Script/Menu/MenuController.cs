@@ -9,7 +9,6 @@ using TMPro;
 public class MenuController : MonoBehaviour
 {
     public AudioMixer audioMixer;
-
     // Gestion du volume dans le menu.
     public void SetVolume(float volume)
     {
@@ -18,12 +17,19 @@ public class MenuController : MonoBehaviour
 
     public void StartGame()
     {
+        SaveDataScript.Refresh();
         UnityEngine.SceneManagement.SceneManager.LoadScene("LevelSelection");
         Time.timeScale = 1;
 
         Debug.Log("START");
     }
+    public void LoadGame()
+    {
+        UnityEngine.SceneManagement.SceneManager.LoadScene("LevelSelection");
+        Time.timeScale = 1;
 
+        Debug.Log("START");
+    }
 
     public void Options()
     {

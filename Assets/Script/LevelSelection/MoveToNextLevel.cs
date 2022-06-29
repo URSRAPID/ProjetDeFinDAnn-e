@@ -2,7 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.SceneManagement;
-
+using TMPro;
 public class MoveToNextLevel : MonoBehaviour
 {
     public int nextSceneLoad;
@@ -32,9 +32,10 @@ public class MoveToNextLevel : MonoBehaviour
 
             else
             {
+                WinPanel.transform.Find("Score").Find("Text Score FLOAT").GetComponent<TextMeshProUGUI>().text =  GameObject.FindObjectOfType<ScoreController>().GetScoreModel().GetScore().GetValue().ToString();
                 WinPanel.SetActive(true);
                 Time.timeScale = 0;
-
+                SaveDataScript.Save_game();
                 // ici je pop up la win scene, animation, music etc
 
                 if (nextSceneLoad > PlayerPrefs.GetInt("levelAt"))
