@@ -8,6 +8,9 @@ public class SpawnPowerUp : MonoBehaviour
     [SerializeField] public GameObject _spawnPrefabPowerUp;
     [SerializeField] public GameObject _spawnPointPowerUp;
 
+    public GameObject errorUnactive;
+    public GameObject yesnoActiveAgain;
+
 
 
     // ici je chope le prefab du bouton power up
@@ -56,6 +59,10 @@ public class SpawnPowerUp : MonoBehaviour
     IEnumerator LoadDelayed(float tempsEnSecondes = 1.5f)
     {
         yield return new WaitForSeconds(tempsEnSecondes);
+        errorUnactive.SetActive(false);
         boutonPowerUp.SetActive(false);
+        yesnoActiveAgain.SetActive(true);
+
+
     }
 }

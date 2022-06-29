@@ -45,7 +45,7 @@ GameObject:
   - component: {fileID: 6499321506834213638}
   - component: {fileID: 2486136327536418388}
   m_Layer: 0
-  m_Name: EnnemiQuiNeTirePas
+  m_Name: EnnemiQuiNeTirePasDouTou
   m_TagString: Enemy
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0

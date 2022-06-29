@@ -3022,7 +3022,7 @@ AudioSource:
   m_Enabled: 1
   serializedVersion: 4
   OutputAudioMixerGroup: {fileID: 24300002, guid: f1a39288875adf84d8cf4ddc828f617f, type: 2}
-  m_audioClip: {fileID: 8300000, guid: b3ffe45f04a7a0440a65e29ec5492f95, type: 3}
+  m_audioClip: {fileID: 8300000, guid: cec96b0d62eb1e44ebc9fa026b297f8e, type: 3}
   m_PlayOnAwake: 1
   m_Volume: 0.723
   m_Pitch: 1
@@ -4762,6 +4762,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 141a08c1d396da848a660fd98d077796, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  powerUpButton: {fileID: 0}
   pauseMenuUI: {fileID: 447997807}
 --- !u!114 &1401910270
 MonoBehaviour:
