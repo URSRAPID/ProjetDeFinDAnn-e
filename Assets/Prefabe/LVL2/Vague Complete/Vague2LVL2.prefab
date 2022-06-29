@@ -41,6 +41,10 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 7479453764388287025}
     m_Modifications:
+    - target: {fileID: 9197344597803588757, guid: c0bde598f1e637c4d9f7cf340b110e9d, type: 3}
+      propertyPath: prefabEnnemi
+      value: 
+      objectReference: {fileID: 6435976481875006337, guid: c608372bd7f82fe4d9cf026f03ef153e, type: 3}
     - target: {fileID: 9197344598120975658, guid: c0bde598f1e637c4d9f7cf340b110e9d, type: 3}
       propertyPath: m_Name
       value: EnnemiQuiNeTirePas 1 (1)
@@ -179,6 +183,10 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 7479453764388287025}
     m_Modifications:
+    - target: {fileID: 9197344597803588757, guid: c0bde598f1e637c4d9f7cf340b110e9d, type: 3}
+      propertyPath: prefabEnnemi
+      value: 
+      objectReference: {fileID: 6435976481875006337, guid: c608372bd7f82fe4d9cf026f03ef153e, type: 3}
     - target: {fileID: 9197344598120975658, guid: c0bde598f1e637c4d9f7cf340b110e9d, type: 3}
       propertyPath: m_Name
       value: EnnemiQuiNeTirePas 1
@@ -317,6 +325,10 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 7479453764388287025}
     m_Modifications:
+    - target: {fileID: 9197344597803588757, guid: c0bde598f1e637c4d9f7cf340b110e9d, type: 3}
+      propertyPath: prefabEnnemi
+      value: 
+      objectReference: {fileID: 6435976481875006337, guid: c608372bd7f82fe4d9cf026f03ef153e, type: 3}
     - target: {fileID: 9197344598120975658, guid: c0bde598f1e637c4d9f7cf340b110e9d, type: 3}
       propertyPath: m_Name
       value: EnnemiQuiNeTirePas 1 (2)
@@ -455,6 +467,10 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 7479453764388287025}
     m_Modifications:
+    - target: {fileID: 9197344597803588757, guid: c0bde598f1e637c4d9f7cf340b110e9d, type: 3}
+      propertyPath: prefabEnnemi
+      value: 
+      objectReference: {fileID: 6435976481875006337, guid: c608372bd7f82fe4d9cf026f03ef153e, type: 3}
     - target: {fileID: 9197344598120975658, guid: c0bde598f1e637c4d9f7cf340b110e9d, type: 3}
       propertyPath: m_Name
       value: EnnemiQuiNeTirePas 1 (3)
