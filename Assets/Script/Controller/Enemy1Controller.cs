@@ -16,6 +16,8 @@ public class Enemy1Controller : MonoBehaviour
 
     private EnemyModel enemyModel;
 
+    public AudioSource hitSound;
+
     // Start is called before the first frame update
     void Start()
     {
@@ -31,6 +33,7 @@ public class Enemy1Controller : MonoBehaviour
     public void OnDamage()
     {
         enemyModel.AddLife(-1);
+        
     }
 
     private void OnCollisionEnter2D(Collision2D collision)
@@ -38,6 +41,7 @@ public class Enemy1Controller : MonoBehaviour
         if (collision.gameObject.tag == "BalleCharacter")
         {
             OnDamage();
+            hitSound.Play();
             if (enemyModel.GetLife().GetValue().GetValue() <= 0)
             {
                 powerUpLiefOuMp = Random.Range(0, 10);

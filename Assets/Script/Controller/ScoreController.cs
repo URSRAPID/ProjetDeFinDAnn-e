@@ -5,6 +5,8 @@ public class ScoreController : MonoBehaviour
 {
 
     private ScoreModel _scoreModel;
+
+    public AudioSource deathSound;
     //[SerializeField] public EnemyController _enemyController ;
 
     [SerializeField] private FloatView _scoreView;
@@ -28,6 +30,7 @@ public class ScoreController : MonoBehaviour
         {
             _scoreModel.AddScore(60);
             Destroy(_enemyController.gameObject);
+            deathSound.Play();
         }
     }
 
@@ -37,6 +40,7 @@ public class ScoreController : MonoBehaviour
         {
             _scoreModel.AddScore(30);
             Destroy(_enemy1Controller.gameObject);
+            deathSound.Play();
         }
     }
     public void AddScoreEnemy3(Enemy2Controller _enemy2Controller)
@@ -45,6 +49,7 @@ public class ScoreController : MonoBehaviour
         {
             _scoreModel.AddScore(30);
             Destroy(_enemy2Controller.gameObject);
+            deathSound.Play();
         }
     }
     public void AddScoreEnemy4(BossController _bossController)
