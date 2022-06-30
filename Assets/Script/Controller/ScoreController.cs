@@ -19,6 +19,7 @@ public class ScoreController : MonoBehaviour
     void Update()
     {
         //AddScoreEnemy();
+
     }
 
     public void AddScoreEnemy(EnemyController _enemyController)
