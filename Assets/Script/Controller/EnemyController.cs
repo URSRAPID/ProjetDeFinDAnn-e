@@ -114,6 +114,7 @@ public class EnemyController : MonoBehaviour
     {
         if (collision.gameObject.tag == "BalleCharacter" )
         {
+            Debug.Log(enemyModel.GetLife().GetValue().GetValue());
             OnDamage();
             hitSound.Play();
             if (enemyModel.GetLife().GetValue().GetValue() <= 0)
@@ -139,7 +140,8 @@ public class EnemyController : MonoBehaviour
                     FindObjectOfType<ScoreController>().AddScoreEnemy(this);
                 }
             }
-            
+            Debug.Log(enemyModel.GetLife().GetValue().GetValue());
+
 
         }
         if (collision.gameObject.tag == "BouclierCharacter")
