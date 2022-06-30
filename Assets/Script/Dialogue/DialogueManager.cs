@@ -11,6 +11,8 @@ using UnityEngine.SceneManagement;
 public class DialogueManager : MonoBehaviour
 {
 
+    
+
     public TMP_Text nameText;
 
     public TMP_Text dialogueText;
@@ -21,7 +23,7 @@ public class DialogueManager : MonoBehaviour
 
     private Queue<string> sentences;
 
-    public Object sceneToLoad;
+    //public Object sceneToLoad;
 
 
 
@@ -101,8 +103,11 @@ public class DialogueManager : MonoBehaviour
     void EndDialogue()
     {
         animator.SetBool("isOpen", false);
+
+        //ici mettre la cam a 5 et tout
+
         
-        SceneManager.LoadScene(sceneToLoad.name);
+        //SceneManager.LoadScene(sceneToLoad.name);
 
     }
 

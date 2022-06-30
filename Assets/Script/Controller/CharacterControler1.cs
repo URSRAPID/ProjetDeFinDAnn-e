@@ -69,6 +69,7 @@ public class CharacterControler1 : MonoBehaviour
     bool loadedOnce = false;
     public AudioSource stopLevelMusic;
     public AudioSource gameoverMusic;
+    public AudioSource playerBeHit;
 
     public bool _bouclierIsActive;
 
@@ -173,6 +174,7 @@ public class CharacterControler1 : MonoBehaviour
         if (!isDead)
         {
             animator.SetTrigger("Hit");
+            playerBeHit.Play();
         }
     }
 
