@@ -14,7 +14,7 @@ GameObject:
   - component: {fileID: 7595481317638380297}
   m_Layer: 0
   m_Name: Laser
-  m_TagString: Untagged
+  m_TagString: Laser
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -209,6 +209,7 @@ MonoBehaviour:
   laserFirePoint: {fileID: 7595481318024322272}
   PlayerLayer: 8
   ShieldLayer: 9
+  IgnoreLaserLayer: 0
 --- !u!1 &7595481318024322275
 GameObject:
   m_ObjectHideFlags: 0

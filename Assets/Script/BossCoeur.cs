@@ -39,6 +39,7 @@ public class BossCoeur : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
+        Debug.Log(bossModel.GetLife().GetValue().GetValue());
         if (LaserFormation1)
         {
             ActiveLaser1();
@@ -51,6 +52,8 @@ public class BossCoeur : MonoBehaviour
             LaserFormation2 = false;
             LaserFormation1 = true;
         }
+
+        Dead();
     }
 
     private void ActiveLaser1()
