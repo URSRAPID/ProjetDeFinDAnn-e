@@ -329,7 +329,7 @@ public class CharacterControler1 : MonoBehaviour
         if (rightUpHit.collider != null || rightDownHit.collider != null)
         {
             isCollisonRight = true;
-            speedCam = 5;
+            speedCam = 0;
         }
         else
         {

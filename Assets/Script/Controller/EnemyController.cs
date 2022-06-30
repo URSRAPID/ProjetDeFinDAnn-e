@@ -27,10 +27,12 @@ public class EnemyController : MonoBehaviour
     private EnemyModel enemyModel;
 
 
+    public float lifeEnemy;
+
     // Start is called before the first frame update
     void Start()
     {
-        enemyModel = new EnemyModel( 3, 3);
+        enemyModel = new EnemyModel(lifeEnemy, 30);
         _pool = GameObject.FindObjectOfType<PoolManagerEnemy>();
         if (cooldownSpawnPool == 0)
         {
@@ -141,6 +143,9 @@ public class EnemyController : MonoBehaviour
             OnDamage();
             OnDamage();
             OnDamage();
+            OnDamage();
+            OnDamage();
+            OnDamage();
             if (enemyModel.GetLife().GetValue().GetValue() <= 0)
             {
                 powerUpLiefOuMp = Random.Range(0, 10);
@@ -168,6 +173,9 @@ public class EnemyController : MonoBehaviour
         }
         else if (collision.gameObject.tag == "Character")
         {
+            OnDamage();
+            OnDamage();
+            OnDamage();
             OnDamage();
             OnDamage();
             OnDamage();

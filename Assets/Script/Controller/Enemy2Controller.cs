@@ -22,6 +22,7 @@ public class Enemy2Controller : MonoBehaviour
     [SerializeField] public ScoreController _scoreController;
     private bool _isDead;
 
+    public float lifeTour = 4;
 
     private EnemyModel enemyModel;
 
@@ -29,7 +30,7 @@ public class Enemy2Controller : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        enemyModel = new EnemyModel(4, 4);
+        enemyModel = new EnemyModel(lifeTour, 30);
         _pool = GameObject.FindObjectOfType<PoolManagerEnemyTour>();
         if (cooldownSpawnPool == 0)
         {
@@ -42,8 +43,7 @@ public class Enemy2Controller : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        if (_isActive == true)
-        {
+       
             currentCoolDown -= Time.deltaTime;
             if (currentCoolDown <= 0)
             {
@@ -54,7 +54,7 @@ public class Enemy2Controller : MonoBehaviour
                 currentCoolDown++;
 
             }
-        }
+      
 
 
 
@@ -141,6 +141,14 @@ public class Enemy2Controller : MonoBehaviour
             OnDamage();
             OnDamage();
             OnDamage();
+            OnDamage();
+            OnDamage();
+            OnDamage();
+            OnDamage();
+            OnDamage();
+            OnDamage();
+            OnDamage();
+            OnDamage();
             if (enemyModel.GetLife().GetValue().GetValue() <= 0)
             {
                 powerUpLiefOuMp = Random.Range(0, 10);
@@ -169,6 +177,14 @@ public class Enemy2Controller : MonoBehaviour
         if (collision.gameObject.tag == "Character")
         {
             Debug.Log("oui");
+            OnDamage();
+            OnDamage();
+            OnDamage();
+            OnDamage();
+            OnDamage();
+            OnDamage();
+            OnDamage();
+            OnDamage();
             OnDamage();
             OnDamage();
             OnDamage();

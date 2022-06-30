@@ -16,10 +16,12 @@ public class Enemy1Controller : MonoBehaviour
 
     private EnemyModel enemyModel;
 
+    public float lifeBouclier = 2;
+
     // Start is called before the first frame update
     void Start()
     {
-        enemyModel = new EnemyModel(2, 2);
+        enemyModel = new EnemyModel(lifeBouclier, 10);
 
     }
 
@@ -66,6 +68,16 @@ public class Enemy1Controller : MonoBehaviour
         {
             OnDamage();
             OnDamage();
+            OnDamage();
+            OnDamage();
+            OnDamage();
+            OnDamage();
+            OnDamage();
+            OnDamage();
+            OnDamage();
+            OnDamage();
+            OnDamage();
+            OnDamage();
             if (enemyModel.GetLife().GetValue().GetValue() <= 0)
             {
 
@@ -94,6 +106,16 @@ public class Enemy1Controller : MonoBehaviour
         }
         else if (collision.gameObject.tag == "Character")
         {
+            OnDamage();
+            OnDamage();
+            OnDamage();
+            OnDamage();
+            OnDamage();
+            OnDamage();
+            OnDamage();
+            OnDamage();
+            OnDamage();
+            OnDamage();
             OnDamage();
             OnDamage();
             if (enemyModel.GetLife().GetValue().GetValue() <= 0)
