@@ -1,12 +1,13 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 public class BossCoeurTrue : MonoBehaviour
 {
     public GameObject MurBoss;
     public GameObject Boss;
-    public GameObject BossC;
+
     // Start is called before the first frame update
     void Start()
     {
@@ -19,7 +20,7 @@ public class BossCoeurTrue : MonoBehaviour
         if (!MurBoss)
         { 
             Destroy(Boss);
-            BossC.gameObject.SetActive(true);
+            UnityEngine.SceneManagement.SceneManager.LoadScene("Level 4");
         }
     }
 }

@@ -72,10 +72,13 @@ public class CharacterControler1 : MonoBehaviour
 
     public bool _bouclierIsActive;
 
+
+    public float manaBouclier = 10000;
+
     void Start()
     {
 
-        characterModel = new CharacterModel(-10, 0, 3, 3, 10000, 10000);
+        characterModel = new CharacterModel(-10, 0, 3, 3, manaBouclier, 20000);
         characterModel.GetLife().Subscribe(lifeView);
         characterModel.GetPosition().Subscribe(positionView);
         characterModel.GetMp().Subscribe(mpView);

@@ -23,10 +23,13 @@ public class BossCoeur : MonoBehaviour
     private bool LaserFormation1 = true;
     private bool LaserFormation2 = false;
 
+    public float LifeCouer = 100;
+
+    private bool _isDead = false;
     // Start is called before the first frame update
     void Start()
     {
-        bossModel = new BossModel(100, 100);
+        bossModel = new BossModel(LifeCouer, 200);
         bossModel.GetLife().Subscribe(lifeView);
         if (cooldownSpawnLaser == 0)
         {
@@ -55,6 +58,11 @@ public class BossCoeur : MonoBehaviour
         if (bossModel.GetLife().GetValue().GetValue() <= 0)
         {
             Debug.Log("OUI");
+            if (!_isDead)
+            {
+                _isDead = true;
+                FindObjectOfType<ScoreController>().AddScoreEnemy5(this);
+            }
             Dead();
         }
         
@@ -112,5 +120,10 @@ public class BossCoeur : MonoBehaviour
     public void ActiveThisObject()
     {
         this.gameObject.SetActive(true);
+    }
+
+    public bool GetIsDead()
+    {
+        return _isDead;
     }
 }

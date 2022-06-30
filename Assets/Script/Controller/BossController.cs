@@ -12,6 +12,7 @@ public class BossController : MonoBehaviour
     public  float speedAngles = 10;
     public float anglesMax;
     private bool isDead = false;
+    private bool isDeadOUI = false;
 
     private GameObject BossC;
 
@@ -51,9 +52,15 @@ public class BossController : MonoBehaviour
                 {
                     bossPrefab.transform.eulerAngles = new Vector3(bossPrefab.transform.eulerAngles.x, bossPrefab.transform.eulerAngles.y, anglesMax);
                     isDead = false;
+                    if (!isDeadOUI)
+                    {
+                        isDeadOUI = true;
+                        FindObjectOfType<ScoreController>().AddScoreEnemy4(this);
+                    }
                     Destroy(gameObject);
                 }
             }
+           
         }
     }
 
@@ -74,5 +81,10 @@ public class BossController : MonoBehaviour
         {
             OnDamage();
         }
+    }
+
+    public bool GetIsDeadOui()
+    {
+        return isDeadOUI;
     }
 }
