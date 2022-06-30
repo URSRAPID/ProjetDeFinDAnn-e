@@ -37,14 +37,14 @@ public class LaserTutorial : MonoBehaviour
             if (_hit.transform.gameObject.layer == PlayerLayer)
             {
                 Draw2DRay(laserFirePoint.position, _hit.point);
-                Debug.Log("Je touche le Player");
+              
                 playerHit = true;
                 FindObjectOfType<CharacterControler1>().AddDamageLaser(this);
             }
             else if (_hit.transform.gameObject.layer == ShieldLayer)
             {
                 Draw2DRay(laserFirePoint.position, _hit.point);
-                Debug.Log("Je touche le Shield");
+                
             }
             else
             {

@@ -97,6 +97,8 @@ public class CanonsActive : MonoBehaviour
                 }
             }
         }
+        
+        
     }
 
     private void SpawnMur()

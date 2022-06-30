@@ -11,7 +11,6 @@ GameObject:
   - component: {fileID: 2530561863202519521}
   - component: {fileID: 2530561863202519550}
   - component: {fileID: 2530561863202519520}
-  - component: {fileID: 7626708501547538636}
   - component: {fileID: 5425925761132205400}
   - component: {fileID: 7645847678412444225}
   m_Layer: 0
@@ -105,7 +104,7 @@ BoxCollider2D:
   m_IsTrigger: 0
   m_UsedByEffector: 0
   m_UsedByComposite: 0
-  m_Offset: {x: -0.17293048, y: 0.18445873}
+  m_Offset: {x: 0.043182194, y: 0.18445873}
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
     pivot: {x: 0.5, y: 0.5}
@@ -116,21 +115,8 @@ BoxCollider2D:
     adaptiveTiling: 0
   m_AutoTiling: 0
   serializedVersion: 2
-  m_Size: {x: 5.1305413, y: 8.51997}
+  m_Size: {x: 0.42691314, y: 8.51997}
   m_EdgeRadius: 0
---- !u!114 &7626708501547538636
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 2530561863202519551}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: e024e6697cf752040af999f8677945e5, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  lifeImage: {fileID: 0}
 --- !u!114 &5425925761132205400
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -143,7 +129,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 34457a2d0be34de46b194564ab23a711, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  lifeView: {fileID: 7626708501547538636}
+  lifeView: {fileID: 0}
   win: {fileID: 8054291416525355922, guid: aa94cafeb2eee734081c6299983b903a, type: 3}
   cooldownSpawnLaser: 6
   Laser1: {fileID: 5365703188360353236}

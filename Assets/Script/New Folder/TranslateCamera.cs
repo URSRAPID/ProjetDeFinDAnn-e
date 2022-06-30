@@ -4,6 +4,7 @@ using UnityEngine;
 
 public class TranslateCamera : MonoBehaviour
 {
+    
     [SerializeField] private float speed;
     // Start is called before the first frame update
     void Start()

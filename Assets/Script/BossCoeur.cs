@@ -1,5 +1,5 @@
-using UnityEngine;
 using TMPro;
+using UnityEngine;
 
 public class BossCoeur : MonoBehaviour
 {
@@ -22,7 +22,7 @@ public class BossCoeur : MonoBehaviour
 
     private bool LaserFormation1 = true;
     private bool LaserFormation2 = false;
-    
+
     // Start is called before the first frame update
     void Start()
     {
@@ -39,21 +39,25 @@ public class BossCoeur : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        Debug.Log(bossModel.GetLife().GetValue().GetValue());
+        
         if (LaserFormation1)
         {
             ActiveLaser1();
             LaserFormation1 = false;
             LaserFormation2 = true;
         }
-         if (LaserFormation2)
+        if (LaserFormation2)
         {
             ActiveEtDesactiverLaser2();
             LaserFormation2 = false;
             LaserFormation1 = true;
         }
-
-        Dead();
+        if (bossModel.GetLife().GetValue().GetValue() <= 0)
+        {
+            Debug.Log("OUI");
+            Dead();
+        }
+        
     }
 
     private void ActiveLaser1()
@@ -66,10 +70,10 @@ public class BossCoeur : MonoBehaviour
             Laser5.SetActive(true);
             currentCoolDown = cooldownSpawnLaser;
             currentCoolDown++;
-            
+
         }
     }
-  
+
 
     private void ActiveEtDesactiverLaser2()
     {
@@ -90,19 +94,23 @@ public class BossCoeur : MonoBehaviour
     }
     public void Dead()
     {
-        if (bossModel.GetLife().GetValue().GetValue() <= 0)
-        {
-            win.SetActive(true);
-            win.transform.Find("Score").Find("Text Score FLOAT").GetComponent<TextMeshProUGUI>().text = GameObject.FindObjectOfType<ScoreController>().GetScoreModel().GetScore().GetValue().ToString();
-        }
-        
+
+        Debug.Log(bossModel.GetLife().GetValue().GetValue());
+        Destroy(this);
+        GameObject.FindObjectOfType<PauseMenu>().win.SetActive(true);
+        win.transform.Find("Score").Find("Text Score FLOAT").GetComponent<TextMeshProUGUI>().text = GameObject.FindObjectOfType<ScoreController>().GetScoreModel().GetScore().GetValue().ToString();
+
     }
 
-private void OnCollisionEnter2D(Collision2D collision)
-{
-    if (collision.gameObject.tag == "BalleCharacter")
+    private void OnCollisionEnter2D(Collision2D collision)
     {
-        OnDamage();
+        if (collision.gameObject.tag == "BalleCharacter")
+        {
+            OnDamage();
+        }
     }
-}
+    public void ActiveThisObject()
+    {
+        this.gameObject.SetActive(true);
+    }
 }

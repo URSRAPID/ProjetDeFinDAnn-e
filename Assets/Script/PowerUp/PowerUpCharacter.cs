@@ -9,12 +9,9 @@ public class PowerUpCharacter : MonoBehaviour
     {
 
         if (collision.gameObject.tag == "Character")
-        {
-            Debug.Log("OUI");
+        {                    
             GameObject.FindObjectOfType<PauseMenu>().powerUpButton.SetActive(true);
-            Debug.Log("OUI");
             Destroy(gameObject);
-            Debug.Log("OUI");
         }
     }
 }

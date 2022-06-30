@@ -13,13 +13,14 @@ public class BossController : MonoBehaviour
     public float anglesMax;
     private bool isDead = false;
 
-    
+    private GameObject BossC;
 
     // Start is called before the first frame update
     void Start()
     {
         bossModel = new BossModel(150, 150);
         bossModel.GetLife().Subscribe(lifeView);
+        BossC = GameObject.Find("BossCœur");
     }
 
     // Update is called once per frame
@@ -61,6 +62,10 @@ public class BossController : MonoBehaviour
     {
         bossModel.AddLife(-1);
 
+    }
+    public BossModel LifeBossMur()
+    {
+        return bossModel;
     }
 
     private void OnCollisionEnter2D(Collision2D collision)
