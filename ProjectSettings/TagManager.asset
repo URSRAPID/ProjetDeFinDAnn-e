@@ -23,6 +23,7 @@ TagManager:
   - Laser
   - "BossC\u0153ur"
   - ArmureBoss4
+  - BoxDead
   layers:
   - Default
   - TransparentFX

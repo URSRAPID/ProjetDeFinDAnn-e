@@ -196,6 +196,18 @@ public class CharacterControler1 : MonoBehaviour
         }
         // ici du coup j'ai fais la fonction qui fait que ca lancera le trigger animation de la mort, manque plus qu'à mettre " Dead(); " à la fin de la condition de mort et c good (comme à la ligne 171 pour Hit();
     }
+    public void DeadCamera()
+    {
+       
+            stopLevelMusic.Stop();
+            playerBeHit.Stop();
+
+            gameOver.SetActive(true);
+            gameOver.transform.Find("Score").Find("Text Score FLOAT").GetComponent<TextMeshProUGUI>().text = GameObject.FindObjectOfType<ScoreController>().GetScoreModel().GetScore().GetValue().ToString();
+            gameoverMusic.Play();
+
+
+    }
 
     IEnumerator LoadDelayed(float tempsEnSecondes = 1.5f)
     {
@@ -248,7 +260,12 @@ public class CharacterControler1 : MonoBehaviour
         {
             _bouclierIsActive = true;
         }
+        if (collision.gameObject.tag == "BoxDead")
+        {
+            DeadCamera();
 
+
+        }
     }
 
     private void BouclierActive()
