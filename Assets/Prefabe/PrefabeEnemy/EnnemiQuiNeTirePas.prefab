@@ -173,7 +173,7 @@ MonoBehaviour:
   _spawnPrefabPowerUpCharacter: {fileID: 4802687807483592087, guid: d64fe9c912775df409d436e15f0a07bb, type: 3}
   _spawnPointPowerUp: {fileID: 3699176007377401228}
   _scoreController: {fileID: 1796600422062537126, guid: 109f34c05e9c0f74faa8dc781b4a3d79, type: 3}
-  lifeBouclier: 9
+  lifeBouclier: 3
   hitSound: {fileID: -7511545687708024041}
 --- !u!82 &-7511545687708024041
 AudioSource:
