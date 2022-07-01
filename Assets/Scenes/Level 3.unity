@@ -10504,9 +10504,11 @@ MonoBehaviour:
     m_Bits: 64
   rayLength: 0.5
   animator: {fileID: 619239309}
+  playerShieldAnimator: {fileID: 0}
   gameOver: {fileID: 86856361}
   stopLevelMusic: {fileID: 694289264}
   gameoverMusic: {fileID: 86856364}
+  playerBeHit: {fileID: 0}
   _bouclierIsActive: 1
   manaBouclier: 10000
 --- !u!212 &619239315
@@ -12017,7 +12019,7 @@ AudioSource:
   m_Enabled: 1
   serializedVersion: 4
   OutputAudioMixerGroup: {fileID: 24300002, guid: f1a39288875adf84d8cf4ddc828f617f, type: 2}
-  m_audioClip: {fileID: 8300000, guid: b3ffe45f04a7a0440a65e29ec5492f95, type: 3}
+  m_audioClip: {fileID: 8300000, guid: c67778896e3ae484c9e75bd25824ca26, type: 3}
   m_PlayOnAwake: 1
   m_Volume: 0.723
   m_Pitch: 1

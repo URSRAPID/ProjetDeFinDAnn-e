@@ -62,6 +62,8 @@ public class CharacterControler1 : MonoBehaviour
     public Animator animator;
     private bool isDead;
 
+    public Animator playerShieldAnimator;
+
 
     // Game Over Panel
 
@@ -78,6 +80,7 @@ public class CharacterControler1 : MonoBehaviour
 
     void Start()
     {
+
 
         characterModel = new CharacterModel(-10, 0, 3, 3, manaBouclier, 20000);
         characterModel.GetLife().Subscribe(lifeView);
@@ -256,18 +259,23 @@ public class CharacterControler1 : MonoBehaviour
             {
                 if (Input.GetMouseButton(0))
                 {
+                    playerShieldAnimator.SetBool("shieldUnactive", false);
                     bouclierView.gameObject.SetActive(true);
                     characterModel.AddMp(-2);
                 }
                 else
                 {
+                    playerShieldAnimator.SetBool("shieldUnactive", true);
                     bouclierView.gameObject.SetActive(false);
+                    
                 }
             }
 
             if (characterModel.GetMp().GetValue().GetValue() <= minMP)
             {
+                playerShieldAnimator.SetBool("shieldUnactive", true);
                 bouclierView.gameObject.SetActive(false);
+                
             }
         }
         
