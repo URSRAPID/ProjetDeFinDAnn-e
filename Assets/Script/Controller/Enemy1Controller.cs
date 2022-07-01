@@ -48,7 +48,7 @@ public class Enemy1Controller : MonoBehaviour
             hitSound.Play();
             if (enemyModel.GetLife().GetValue().GetValue() <= 0)
             {
-                powerUpLiefOuMp = Random.Range(0, 10);
+                powerUpLiefOuMp = Random.Range(0, 15);
 
                 if (powerUpLiefOuMp == 2)
                 {

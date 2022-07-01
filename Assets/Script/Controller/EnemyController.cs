@@ -116,10 +116,10 @@ public class EnemyController : MonoBehaviour
         {
             Debug.Log(enemyModel.GetLife().GetValue().GetValue());
             OnDamage();
-            hitSound.Play();
+           hitSound.Play();
             if (enemyModel.GetLife().GetValue().GetValue() <= 0)
             {
-                powerUpLiefOuMp = Random.Range(0, 10);
+                powerUpLiefOuMp = Random.Range(0, 15);
 
                 if (powerUpLiefOuMp == 2)
                 {
@@ -154,7 +154,7 @@ public class EnemyController : MonoBehaviour
             OnDamage();
             if (enemyModel.GetLife().GetValue().GetValue() <= 0)
             {
-                powerUpLiefOuMp = Random.Range(0, 10);
+                powerUpLiefOuMp = Random.Range(0, 15);
 
                 if (powerUpLiefOuMp == 2)
                 {
@@ -187,7 +187,7 @@ public class EnemyController : MonoBehaviour
             OnDamage();
             if (enemyModel.GetLife().GetValue().GetValue() <= 0)
             {
-                powerUpLiefOuMp = Random.Range(0, 10);
+                powerUpLiefOuMp = Random.Range(0, 15);
 
                 if (powerUpLiefOuMp == 2)
                 {

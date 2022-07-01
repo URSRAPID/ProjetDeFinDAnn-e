@@ -1678,9 +1678,11 @@ MonoBehaviour:
     m_Bits: 64
   rayLength: 0.5
   animator: {fileID: 881740672}
+  playerShieldAnimator: {fileID: 883793639}
   gameOver: {fileID: 534142120}
   stopLevelMusic: {fileID: 1849528184}
   gameoverMusic: {fileID: 534142121}
+  playerBeHit: {fileID: 0}
   _bouclierIsActive: 1
   manaBouclier: 100000
 --- !u!212 &881740678
@@ -1747,6 +1749,7 @@ GameObject:
   - component: {fileID: 883793634}
   - component: {fileID: 883793636}
   - component: {fileID: 883793635}
+  - component: {fileID: 883793639}
   m_Layer: 9
   m_Name: BouclierCharacter
   m_TagString: BouclierCharacter
@@ -1878,6 +1881,25 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 5
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!95 &883793639
+Animator:
+  serializedVersion: 3
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 883793633}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: bbca490d2cd695d41a3e6aa661246f5e, type: 2}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+  m_KeepAnimatorControllerStateOnDisable: 0
 --- !u!1 &918413213
 GameObject:
   m_ObjectHideFlags: 0
@@ -3554,7 +3576,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 5ac9fd61438af4e49acc25e6f5927686, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  speed: 0
+  speed: 5
 --- !u!81 &1849528190
 AudioListener:
   m_ObjectHideFlags: 0

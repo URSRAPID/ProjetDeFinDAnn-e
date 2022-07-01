@@ -82,7 +82,7 @@ public class CharacterControler1 : MonoBehaviour
     {
 
 
-        characterModel = new CharacterModel(-10, 0, 3, 3, manaBouclier, 20000);
+        characterModel = new CharacterModel(-10, 0, 3, 3, manaBouclier, 30000);
         characterModel.GetLife().Subscribe(lifeView);
         characterModel.GetPosition().Subscribe(positionView);
         characterModel.GetMp().Subscribe(mpView);
@@ -200,7 +200,6 @@ public class CharacterControler1 : MonoBehaviour
     {
        
             stopLevelMusic.Stop();
-            playerBeHit.Stop();
 
             gameOver.SetActive(true);
             gameOver.transform.Find("Score").Find("Text Score FLOAT").GetComponent<TextMeshProUGUI>().text = GameObject.FindObjectOfType<ScoreController>().GetScoreModel().GetScore().GetValue().ToString();

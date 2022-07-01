@@ -111,11 +111,12 @@ public class Enemy2Controller : MonoBehaviour
     {
         if (collision.gameObject.tag == "BalleCharacter")
         {
+            Debug.Log(enemyModel.GetLife().GetValue().GetValue());
             OnDamage();
             hitSound.Play();
             if (enemyModel.GetLife().GetValue().GetValue() <= 0)
             {
-                powerUpLiefOuMp = Random.Range(0, 10);
+                powerUpLiefOuMp = Random.Range(0, 15);
 
                 if (powerUpLiefOuMp == 2)
                 {
@@ -155,7 +156,7 @@ public class Enemy2Controller : MonoBehaviour
             OnDamage();
             if (enemyModel.GetLife().GetValue().GetValue() <= 0)
             {
-                powerUpLiefOuMp = Random.Range(0, 10);
+                powerUpLiefOuMp = Random.Range(0, 15);
 
                 if (powerUpLiefOuMp == 2)
                 {
@@ -195,7 +196,7 @@ public class Enemy2Controller : MonoBehaviour
             OnDamage();
             if (enemyModel.GetLife().GetValue().GetValue() <= 0)
             {
-                powerUpLiefOuMp = Random.Range(0, 10);
+                powerUpLiefOuMp = Random.Range(0, 15);
 
                 if (powerUpLiefOuMp == 2)
                 {

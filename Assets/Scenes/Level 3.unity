@@ -8659,7 +8659,7 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 2974131097475134548, guid: 907bb924e0a16044da561bdcbdfb71ce, type: 3}
       propertyPath: m_LocalPosition.x
-      value: 345.27997
+      value: 350.41998
       objectReference: {fileID: 0}
     - target: {fileID: 2974131097475134548, guid: 907bb924e0a16044da561bdcbdfb71ce, type: 3}
       propertyPath: m_LocalPosition.y
@@ -9015,7 +9015,7 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 2974131097475134548, guid: 907bb924e0a16044da561bdcbdfb71ce, type: 3}
       propertyPath: m_LocalPosition.x
-      value: 345.27997
+      value: 350.42
       objectReference: {fileID: 0}
     - target: {fileID: 2974131097475134548, guid: 907bb924e0a16044da561bdcbdfb71ce, type: 3}
       propertyPath: m_LocalPosition.y
@@ -10504,13 +10504,13 @@ MonoBehaviour:
     m_Bits: 64
   rayLength: 0.5
   animator: {fileID: 619239309}
-  playerShieldAnimator: {fileID: 0}
+  playerShieldAnimator: {fileID: 1268489488}
   gameOver: {fileID: 86856361}
   stopLevelMusic: {fileID: 694289264}
   gameoverMusic: {fileID: 86856364}
   playerBeHit: {fileID: 0}
   _bouclierIsActive: 1
-  manaBouclier: 10000
+  manaBouclier: 25000
 --- !u!212 &619239315
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -20872,6 +20872,7 @@ GameObject:
   - component: {fileID: 1268489483}
   - component: {fileID: 1268489485}
   - component: {fileID: 1268489484}
+  - component: {fileID: 1268489488}
   m_Layer: 9
   m_Name: BouclierCharacter
   m_TagString: BouclierCharacter
@@ -21003,6 +21004,25 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 7
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!95 &1268489488
+Animator:
+  serializedVersion: 3
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1268489482}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: bbca490d2cd695d41a3e6aa661246f5e, type: 2}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+  m_KeepAnimatorControllerStateOnDisable: 0
 --- !u!4 &1268493052 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 5456768432159102261, guid: 579ff9b8392b441478858f3dc9c70c7c, type: 3}
@@ -21246,7 +21266,7 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 2974131097475134548, guid: 907bb924e0a16044da561bdcbdfb71ce, type: 3}
       propertyPath: m_LocalPosition.x
-      value: 384.43
+      value: 389.26996
       objectReference: {fileID: 0}
     - target: {fileID: 2974131097475134548, guid: 907bb924e0a16044da561bdcbdfb71ce, type: 3}
       propertyPath: m_LocalPosition.y
@@ -25064,7 +25084,7 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 2974131097475134548, guid: 907bb924e0a16044da561bdcbdfb71ce, type: 3}
       propertyPath: m_LocalPosition.x
-      value: 384.33002
+      value: 389.17
       objectReference: {fileID: 0}
     - target: {fileID: 2974131097475134548, guid: 907bb924e0a16044da561bdcbdfb71ce, type: 3}
       propertyPath: m_LocalPosition.y
@@ -29559,7 +29579,7 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 2974131097475134548, guid: 907bb924e0a16044da561bdcbdfb71ce, type: 3}
       propertyPath: m_LocalPosition.x
-      value: 349.31
+      value: 354.45
       objectReference: {fileID: 0}
     - target: {fileID: 2974131097475134548, guid: 907bb924e0a16044da561bdcbdfb71ce, type: 3}
       propertyPath: m_LocalPosition.y
@@ -31662,7 +31682,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1957380788}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: -9.66, y: 0, z: 0}
+  m_LocalPosition: {x: -9.48, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 694289265}
