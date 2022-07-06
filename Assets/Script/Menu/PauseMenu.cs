@@ -53,4 +53,18 @@ public class PauseMenu : MonoBehaviour
         Time.timeScale = 0f;
         GameIsPaused = true;
     }
+
+  
+
+    public void Menu()
+    {
+        UnityEngine.SceneManagement.SceneManager.LoadScene("Menu");
+        Time.timeScale = 1;
+    }
+
+    public void LevelSelection()
+    {
+        UnityEngine.SceneManagement.SceneManager.LoadScene("LevelSelection");
+        Time.timeScale = 1;
+    }
 }
